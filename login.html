@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container container-fluid" id="login-page">
+    	<form role="form" method="post" enctype="multipart/form-data" action="loginCheck.php">
+        	<p id="login-email" class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Your email">
+            </p>
+            <p id="login-password" class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Your password">
+            </p>
+            <p>
+            	<input type="submit" class="btn btn-default" value="LOG IN">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

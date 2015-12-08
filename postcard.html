@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<h1>Postcard</h1>
+		<form action="receiveData.php" method="post" enctype="multipart/form-data">
+			
+			<p>
+				<label>
+					<input type="text" name="title" placeholder="Title" required autofocus />
+				</label>
+			</p>
+
+			<p>
+				<label>
+					<input type="text" name="location" placeholder="Location" required />
+				</label>
+			</p>
+
+			<p>
+				<label>
+					<input type="text" name="tags" placeholder="Tags" required />
+				</label>
+			</p>
+
+			<p>
+				<label>
+					<textarea name="content" cols="30" rows="10" placeholder="content" required ></textarea>
+				</label>
+			</p>
+			<p>
+				<input type="radio" name="privacy" value="1" checked> Public
+				<input type="radio" name="privacy" value="2"> Private
+			</p>
+
+			<p>
+				<label>
+					<input type="file" name="image" accept="image/*" required />
+				</label>
+			</p>
+
+			<p>
+				<input type="submit" value="Save">
+			</p>
+
+		</form>
+
+		
+	</body>
+
+</html>
