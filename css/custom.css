@@ -34,6 +34,7 @@ a:link, a:visited, p {
 
 a:hover {
 	color: #fff;
+	text-decoration: none;
 	text-shadow: 0 0 5px #fff;
 }
 
@@ -143,6 +144,7 @@ nav#nav-out {
 	height: 76px;
 	background-color: #b6323b;
 	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, .13);
 	z-index: 10;
 }
 
@@ -210,46 +212,49 @@ section#login-page, section#signup-page {
 	background-size: cover;
 }
 
-form#login-form {
+form#login-form, form#signup-form {
 	margin: 166px auto 0;
 	width: 514px;
 }
 
-form#login-form h2 {
+form#login-form h2, form#signup-form h2 {
 	margin-bottom: 45px;
 	text-align: center;
 }
 
-form#login-form input, a.social-media-login {
+form#login-form input, a.social-media-login, form#signup-form input, a.social-media-signup {
 	width: 100%;
 	border-radius: 0;
 }
 
-input.login-field {
+input.login-field, input.signup-field {
 	padding-left: 80px;
 	height: 63px;
+	font-family: 'Source Sans Pro';
+	font-size: 24px;
+	color: #3f3a3a;
 	background-color: #fff;
 	background-repeat: no-repeat;
 }
 
-p#login-email input {
+p#login-email input, p#signup-email input {
 	background-image: url('../images/mail-icon.png');
 	background-position: 12px 10px;
 }
 
-p#login-password input {
+p#login-password input, p#signup-password input {
 	background-image: url('../images/lock-icon.png');
 	background-position: 15px 8px;
 }
 
-input.login-btn, a.social-media-login {
+input.login-btn, a.social-media-login, input.signup-btn, a.social-media-signup {
 	font-family: 'Source Sans Pro';
 	color: #fff;
 	text-transform: uppercase;
 	text-align: center;
 }
 
-input.login-btn {
+input.login-btn, input.signup-btn {
 	margin: 20px 0;
 	padding: 0;
 	height: 49px;
@@ -258,21 +263,21 @@ input.login-btn {
 	border: none;
 }
 
-a.social-media-login {
+a.social-media-login, a.social-media-signup {
 	display: inline-block;
 	height: 67px;
 	font-size: 30px;
 }
 
-a#fb-login {
+a#fb-login, a#fb-signup {
 	background: url('../images/facebook-icon-white.png') no-repeat 13px #384f86;
 }
 
-a#t-login {
+a#t-login, a#t-signup {
 	background: url('../images/twitter-icon-white.png') no-repeat 13px #3186c1;
 }
 
-a.social-media-login span {
+a.social-media-login span, a.social-media-signup span {
 	position: relative;
 	top: 10px;
 }
