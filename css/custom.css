@@ -20,11 +20,21 @@
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Source Sans Pro';
-	color: white;
 }
 
 h2 {
 	font-size: 90px;
+}
+
+label, textarea, select, input {
+	font-family: 'Source Sans Pro Light';
+}
+
+input[type=submit] {
+	font-family: 'Source Sans Pro';
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
 }
 
 a:link, a:visited, p {
@@ -82,13 +92,18 @@ section#home {
 	src: url('../fonts/SourceSansPro-Regular.ttf');
 }
 
+@font-face {
+	font-family: 'Source Sans Pro Light';
+	src: url('../fonts/SourceSansPro-Light.ttf');
+}
+
 a, .navbar-default .navbar-nav>li>a {
 	font-family: 'Source Sans Pro';
-	color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a {
 	font-size: 20px;
+	color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -104,6 +119,7 @@ p {
 .slogan {
 	margin-bottom: 26px;
 	font-family: Pacifico;
+	color: #fff;
 }
 
 #welcome-text {
@@ -136,7 +152,7 @@ nav#front-page .container-fluid {
 	border-bottom: 1px solid rgba(255, 255, 255, .13);
 }
 
-/* Login and Sign up nav */
+/* Login and sign up nav */
 
 nav#nav-out {
 	position: fixed;
@@ -205,6 +221,10 @@ section#home .col-md-2 span {
 *
 *
 */
+
+section#login-page a, section#signup-page a, section#login-page h2, section#signup-page h2 {
+	color: #fff;
+}
 
 section#login-page, section#signup-page {
 	background-image: url('../images/login-sign-in-background.jpg');
@@ -280,4 +300,125 @@ a#t-login, a#t-signup {
 a.social-media-login span, a.social-media-signup span {
 	position: relative;
 	top: 10px;
+}
+
+/**
+* Sign up completion
+*
+*
+*/
+
+section#signup-completion-page {
+	background-color: #f3f3f3;
+	text-align: center;
+}
+
+form#signup-completion-form {
+	margin: 0 auto;
+	padding: 104px 0;
+	width: 1070px;
+}
+
+form#signup-completion-form p {
+	color: #000;
+}
+
+.page-title {
+	margin-bottom: 110px;
+	font-size: 48px;
+	text-align: center;
+}
+
+.role-radio {
+	margin-bottom: 40px;
+}
+
+/* http://stackoverflow.com/questions/1120879/css-checkbox-input-styling (10/12/2015) */
+form#signup-completion-form .role-radio input {
+	margin-right: 16px;
+	padding: 0 5px;
+	border-radius: 100%;
+	-webkit-appearance: button;
+	color: #fff;
+	width: 35px;
+	height: 35px;
+	background-color: #d4abac;
+}
+
+form#signup-completion-form .role-radio input:checked {
+	background: url('../images/tick-icon.png') no-repeat 7px #d4abac;
+}
+
+form#signup-completion-form #tourist-radio {
+	float: right;
+}
+
+form#signup-completion-form #traveler-radio {
+	float: left;
+}
+
+figure#signup-profile-picture {
+	margin: auto;
+	width: 198px;
+	height: 197px;
+	border-radius: 7px;
+	overflow: hidden;
+}
+
+figure#signup-profile-picture img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+label[for=user-picture] {
+	margin-top: 24px;
+	font-size: 24px;
+	font-weight: 100;
+	text-align: center;
+}
+
+/* http://jsfiddle.net/gabrieleromanato/mxq9R/ (10/12/2015) */
+#user-picture-btn {
+	margin: 12px auto;
+	width: 196px;
+	height: 51px;
+	background: url('../images/choose-picture.png') no-repeat;
+}
+
+#user-picture-upload {
+	display: block;
+	width: 196px;
+	height: 51px;
+	border-radius: 7px;
+	color: #e7e7e7;
+	opacity: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#nationality-and-description * {
+	width: 100%;
+	font-size: 24px;
+	text-indent: 44px;
+}
+
+#nationality-and-description select {
+	height: 51px;
+	background: url('../images/flag-icon.png') no-repeat 6px 10px;
+}
+
+#nationality-and-description textarea {
+	margin-top: 30px;
+	padding-top: 6px; 
+	height: 276px;
+	background: url('../images/pen-icon.png') no-repeat 6px 10px;
+}
+
+form#signup-completion-form input[type=submit] {
+	margin-top: 50px;
+	width: 290px;
+	height: 51px;
+	background-color: #ffa200;
+	border: none;
 }
