@@ -36,7 +36,7 @@
 
 				</div>
 				<div class="row">
-					<div class="col-md-12"><figure><img src="images/local-guides.png"></figure></div>
+					<div class="col-md-12"><figure class="locals"><img src="images/local-guides.png"></figure></div>
 				</div>
 
 			</div>

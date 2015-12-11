@@ -563,7 +563,15 @@ section#event-page .event-place {
 	background: url('../images/map-icon.png') no-repeat 12px 0;
 }
 
+section#event-page .local-folks-title {
+	margin: 70px 0 50px;
+	font-size: 30px;
+	text-align: center;
+}
 
+.locals {
+	text-align: center;
+}
 
 /**
 *
