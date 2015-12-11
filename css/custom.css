@@ -40,7 +40,6 @@ input[type=text] {
 
 textarea, input[type=text] {
 	text-indent: 44px;
-	border: none;
 }
 
 a:hover {
@@ -74,6 +73,7 @@ section#home {
 
 #welcome {
 	padding-top: 20vh;
+	color: #fff;
 	text-align: center;
 }
 
@@ -189,6 +189,13 @@ ul.navbar-nav li a {
 ul.navbar-nav li a.box-btn {
 	border: 2px solid #fff;
 	border-radius: 5px;
+}
+
+ul.navbar-nav a#nav-profile-picture img {
+	position: relative;
+	top: -14px;
+	width: 56px;
+	height: auto;
 }
 
 /**
@@ -327,7 +334,7 @@ form#signup-completion-form p {
 }
 
 .page-title {
-	margin-bottom: 110px;
+	margin-bottom: 40px;
 	font-size: 48px;
 	text-align: center;
 }
@@ -431,6 +438,7 @@ form#signup-completion-form input[type=submit] {
 
 section#loggedin-user-profile-page {
 	padding: 104px 0;
+	background-color: #f3f3f3;
 	text-align: center;
 }
 
@@ -459,6 +467,7 @@ p#user-description {
 	margin: 40px auto;
 	max-width: 500px;
 	font-size: 18px;
+	overflow: visible;
 }
 
 section#loggedin-user-profile-page div#user-information p {
@@ -476,7 +485,8 @@ section#loggedin-user-profile-page a#edit-link {
 */
 
 section#user-profile-page {
-	padding: 104px 0; 
+	padding: 104px 0;
+	background-color: #f3f3f3;
 }
 
 section#user-profile-page div.row:nth-child(2) div.col-md-4:first-child * {
@@ -518,6 +528,42 @@ form#contact-form textarea[name=message] {
 form#contact-form input[type=submit] {
 	border-radius: 7px;
 }
+
+/**
+* Event page
+*
+*
+*/
+
+section#event-page {
+	padding: 104px 0;
+	background-color: #f3f3f3;
+}
+
+section#event-page .event-picture {
+	max-width: 435px;
+	height: auto;
+	float: right;
+}
+
+section#event-page .event-time, section#event-page .event-place {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-left: 70px;
+	height: 42px;
+	font-size: 30px;
+	color: #b6323b;
+}
+
+section#event-page .event-time {
+	background: url('../images/clock-icon.png') no-repeat 12px 0;
+}
+
+section#event-page .event-place {
+	background: url('../images/map-icon.png') no-repeat 12px 0;
+}
+
+
 
 /**
 *

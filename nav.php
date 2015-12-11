@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	if(isset($_SESSION['loggedOn'])) {
+		$nav = file_get_contents('navIn.php', true);
+	} else {
+		$nav = file_get_contents('navOut.php', true);
+	}
+?>
+
+
 <?php echo '
 
 	<nav id="nav-out" class="navbar navbar-default">
@@ -5,15 +15,7 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
 			</div>
-			<div>
-				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Postcards</a></li>
-					<li><a href="#">Events</a></li> 
-					<li><a href="#">Log in</a></li>
-					<li><a class="box-btn" href="#">Sign up</a></li> 
-				</ul>
-			</div>
+			<div>' . $nav . '</div>
 		</div>
 	</nav>';
 	

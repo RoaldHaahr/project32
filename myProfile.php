@@ -37,7 +37,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<a class="link-button red-link" id="edit-link" href="edit.php">EDIT</a>
+						<a class="link-button red-link" id="edit-link" href="signUpCompletion.php">EDIT</a>
 					</div>
 				</div>
 

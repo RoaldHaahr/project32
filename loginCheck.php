@@ -18,9 +18,9 @@
 		$_SESSION["loggedOn"] = 1;
 		$_SESSION["userID"] = $row["id"];
 		$_SESSION["role"] = $row["role"];
-		echo 'pass';
+		header('Location: ' . '/project32/myProfile.php');
 	} else {
-		echo $e->getMessage();
+		header('Location: ' . '/project32/login.php');
 	};
 
 	$conn=null; //disconnect to server

@@ -7,11 +7,11 @@
 			</div>
 			<div>
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Postcards</a></li>
-					<li><a href="#">Events</a></li> 
-					<li><a href="#">Log in</a></li>
-					<li><a class="box-btn" href="#">Sign up</a></li> 
+					<li><a href="index.php">Home</a></li>
+					<li><a href="postcards.php">Postcards</a></li>
+					<li><a href="events.php">Events</a></li> 
+					<li><a href="login.php">Log in</a></li>
+					<li><a class="box-btn" href="signUp.php">Sign up</a></li> 
 				</ul>
 			</div>
 		</div>
