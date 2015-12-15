@@ -682,11 +682,20 @@ div#pre-image p img {
 	height: 137px;
 }
 
-
-
 textarea#story {
 	width: 382px;
 	height: 378px;
+}
+
+/**
+* Postcards page
+*
+*
+*/
+
+section#postcards-page {
+	padding: 104px 0;
+	background-color: #f3f3f3;
 }
 
 /**
@@ -694,6 +703,48 @@ textarea#story {
 *
 *
 */
+
+/**
+* Events page
+*
+*
+*/
+
+figure#events-banner img {
+	width: 100%;
+	height: auto;
+}
+
+a.events-links {
+	display: block;	
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+}
+
+a#newest-events {
+	background-color: #3a3434;
+}
+
+a#nearest-events {
+	background-color: #b6323b;
+}
+
+div#events-list {
+	margin-top: 30px;
+}
+
+div.events-list-item {
+	padding: 8px 30px;
+	border-top: 1px solid #313131;
+}
+
+div.events-list-item img {
+	width: 100%;
+	height: auto;
+}
+
+/*******/
 
 .link-button {
 	display: inline-block;
