@@ -5,10 +5,10 @@
 		
 			<div class="container-fluid">
 				
-				<form action="addEvent.php" method="post" id="create-event-form">
+				<form action="addEvent.php" method="post" id="create-event-form" enctype="multipart/form-data">
 					<div class="row">
 						<div class="col-md-10">
-							<h2 class="page-title">Create new event</h2>
+							<h2 class="page-title">Create a new event</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -18,7 +18,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<input type="text" nane="event-name" id="create-event-name" placeholder="Name of the event">
+							<input type="text" name="event-name" id="create-event-name" placeholder="Name of the event">
 						</div>
 					</div>
 					<div class="row">
@@ -26,9 +26,9 @@
 							<textarea name="event-description" placeholder="Write a short description about the event"></textarea>
 						</div>
 						<div class="col-md-6">
-							<input placeholder="Choose date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+							<input name="event-date" placeholder="Choose date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
 							<div id="create-event-picture">
-								<input type="file" name="event-picture">	
+								<input type="file" name="image" />	
 							</div>
 							<p>
 								<input class="red-link link-button" type="submit" value="Create event">

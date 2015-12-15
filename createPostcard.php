@@ -5,7 +5,7 @@
 		
 			<div class="container-fluid">
 				
-				<form action="addPostcard.php" method="post" id="create-postcard-form">
+				<form action="addPostcard.php" method="post" id="create-postcard-form" enctype="multipart/enctype">
 					<div class="row">
 						<div class="col-md-12">
 							<h2 class="page-title">Create a new postcard</h2>

@@ -17,6 +17,9 @@
 			<div class="col-md-6"><a class="events-links" id="nearest-events" href="#">EVENTS AROUND YOU</a></div>
 		</div>
 		<div id="events-list">
+
+			<?php include_once('getEvents.php'); ?>
+			
 			<div class="row events-list-item">
 				<div class="col-md-4">
 					<time>DEC 23</time>

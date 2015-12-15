@@ -31,6 +31,6 @@
 
 	echo $postcards;
 
-	$conn = "";
+	$conn = null;
 
 ?>
