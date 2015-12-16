@@ -16,7 +16,7 @@
 				$st = $conn->prepare($sql);
 				$st->bindValue(":eventName", $_POST['event-name'], PDO::PARAM_STR);
 				$st->bindValue(":eventDescription", $_POST['event-description'], PDO::PARAM_STR);
-				$st->bindValue(":eventDate",$_POST["event-date"], PDO::PARAM_STR);
+				$st->bindValue(":eventDate", timetostr($_POST["event-date"]), PDO::PARAM_STR);
 				$st->execute();
 			} catch(PDOException $e) {
 				echo "Server Error - Try again!".$e->getMessage();

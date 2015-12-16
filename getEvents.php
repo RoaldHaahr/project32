@@ -19,24 +19,27 @@
 		$description = $row['event_description'];
 		$image = $row['event_image_url'];
 
-		$events .= '
-			<div class="row events-list-item">
-				<div class="col-md-4">
-					<time>' . $date . '</time>
-				</div>
-				<div class="col-md-4">
-					<img class="events-picture" src="' . $image . '" alt="">
-				</div>
-				<div class="col-md-4">
-					<h3 class="eventtitle">' . $name . '</h3>
-					<p>
-						<time>19:00</time>
-						<span class="event-location"></span>
-						<p class="event-description">' . $description . '</p>
-					</p>
-				</div>
-			</div>
-		';
+		if(strtotime(date('d F Y', strtotime('01 November 2015'))) < $date ) {
+
+			$events .= '
+				<div class="row events-list-item">
+					<div class="col-md-4">
+						<time>' . date('M d, Y', $date) . '</time>
+					</div>
+					<div class="col-md-4">
+						<img class="events-picture" src="' . $image . '" alt="">
+					</div>
+					<div class="col-md-4">
+						<h3 class="eventtitle">' . $name . '</h3>
+						<p>
+							<time>' . date('H i', $date) .'</time>
+							<span class="event-location"></span>
+							<p class="event-description">' . $description . '</p>
+						</p>
+					</div>
+				</div>';
+
+		}
 	}
 
 	echo $events;
