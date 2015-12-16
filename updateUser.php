@@ -5,8 +5,8 @@
 	$image = addslashes(file_get_contents($_FILES['image']['tmp_name'])); //Extract the content of image
 	$imageProperties = getimageSize($_FILES['image']['tmp_name']);//Extract the mime type (filetype)
 
-	$sql = "INSERT INTO users (description, picture, filetype, role, country)
-			VALUES (:description," . $image . ", " . $imageProperties['mime'] . ", :role, :country);";
+	$sql = "UPDATE users
+			SET description = :description, picture = " . $image . ", filetype =  " . $imageProperties['mime'] . ", role = :role, country = :country);";
 
 	try {
 		$st = $conn->prepare($sql);

@@ -37,6 +37,7 @@
 						<p id="nationality-and-description">
 							<select name="user-nationality">
 								<option selected disabled>Your nationality</option>
+								<?php include_once('getCountries.php'); ?>
 							</select><br>
 							<textarea name="user-description" placeholder="Write a short description"></textarea>
 						</p>
