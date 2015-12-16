@@ -402,34 +402,35 @@ label[for=user-picture] {
 
 /* http://jsfiddle.net/gabrieleromanato/mxq9R/ (10/12/2015) */
 #user-picture-btn {
-	margin: 12px 40px;
+	margin: 12px auto;
 	width: 100%;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
-	color:white;
-	cursor: pointer;
-    
+	margin-left: 40px;
 	
 }
+
+#user-picture-upload {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 7px;
+	color: #e7e7e7;
+	opacity: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
 #choose-picture {
 	margin-top:40px;
-	margin-left: -80px;
+	margin-left: -70px;
 	padding-top: 30px;
 	color:white;
 	font-size: 18px;
 	opacity: 0.6;
 	
 }
-#user-picture-upload {
-	display: block;
-	width: 196px;
-	height: 51px;
-	border-radius: 7px;
-	color: white;
-	background: cd2b2b;
-	
-	cursor: pointer;
-}
+
 
 #nationality-and-description * {
 	width: 100%;
@@ -446,6 +447,9 @@ label[for=user-picture] {
 	background: url('../images/pen-icon.png') no-repeat 6px 10px;
 }
 
+#nationality {
+	text-align: right;
+}
 form#signup-completion-form input[type=submit] {
 	margin-top: 50px;
 	width: 290px;

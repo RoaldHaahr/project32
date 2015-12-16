@@ -29,18 +29,22 @@
 					</div>
 					<div class="col-md-4">
 						<label for="user-picture">
+
 							Upload your profile picture
+
 						</label>
-						
-                        <input id="user-picture-upload" type="file" name="user-picture" value="Choose picture" >
+
+						<div id="user-picture-btn"><p id="choose-picture"><font color="white"> Choose picture</font><input id="user-picture-upload" type="file" name="user-picture" value="Choose picture"></p></div>
+
 					</div>
+
 					<div class="col-md-5">
-						<p id="nationality-and-description">
+						<div id="nationality-and-description">
 							<select name="user-nationality">
-								<option selected disabled>Your nationality</option>
+								<option selected disabled placeholder="Your nationality" ><li id="nationality">Your nationality </li></option>
 							</select><br>
 							<textarea name="user-description" placeholder="Write a short description"></textarea>
-						</p>
+						</div>
 					</div>
 				</div>
 				<div class="row">
