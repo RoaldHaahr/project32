@@ -3,7 +3,7 @@
 
 	<section class="page" id="signup-completion-page">
 		
-		<form id="signup-completion-form">
+		<form id="signup-completion-form" action="updateUser.php" method="post" enctype="multipart/form-data">
 			<div class="container-fluid">
 				
 				<div class="row">
@@ -14,12 +14,12 @@
 				<div class="row">
 					<div class="col-md-6">
 						<p class="role-radio" id="tourist-radio">
-							<input type="radio" name="role" value="tourist">I'm a tourist
+							<input type="radio" name="role" value="Tourist">I'm a tourist
 						</p>
 					</div>
 					<div class="col-md-6">
 						<p class="role-radio" id="traveler-radio">
-							<input type="radio" name="role" value="traveler">I'm a traveler
+							<input type="radio" name="role" value="Traveler">I'm a traveler
 						</p>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 							Upload your profile picture
 						</label>
 						
-                        <input id="user-picture-upload" type="file" name="user-picture" value="Choose picture" >
+                        <input id="user-picture-upload" type="file" name="image" value="Choose picture" >
 					</div>
 					<div class="col-md-5">
 						<p id="nationality-and-description">
