@@ -1,4 +1,4 @@
-<?php include 'getUserProfile.php'; ?>
+<?php include 'getProfile.php'; ?>
 <!DOCTYPE html>
 <html>
 	
@@ -25,7 +25,7 @@
 	<body>
 		
 		<header>
-				<a href="" id="logo-header"><img id="icon-black" src="img/icon-black.png" alt="logo"></a>
+				<a href="m.postcards.php" id="logo-header"><img src="img/logowhite.png" alt="logo" id="logowhite"></a>
 				
 				<a href="m.addPostcard.php"><img src="img/plus.png" alt="" class="plus"></a>
 	
@@ -36,6 +36,7 @@
 			<div class="container">
 				
 				<?php
+					echo $profilePicture;
 					echo '<h1 class="white">'.$row["name"].'</h1>';
 					echo '<p class="white small">- '.$row["role"].' -</p>';
 					echo '<p class="white">'.$row["description"].'</p>';
@@ -58,6 +59,8 @@
 			?>
 
 			<p>Postcards sent:</p>
+
+			<?php include 'getUserPostcards.php'; ?>
 
 		</div>
 

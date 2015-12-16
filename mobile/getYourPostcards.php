@@ -1,7 +1,7 @@
 <?php
 	include 'connection.php';
-
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type = 1";
+	session_start();
+	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE " . $_SESSION['userID'] . " = userID";
 	try {
 		$st = $conn->prepare($sql);
 		$st->execute();

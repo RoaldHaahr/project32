@@ -1,7 +1,7 @@
 <?php
 	include 'connection.php';
-	session_start();
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE " . $_SESSION['userID'] . " = userID";
+	
+	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type = 1 AND userID = " . $_GET['ID'];
 	try {
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -13,12 +13,14 @@
 	foreach($rows as $row) {
 		$title = $row['title'];
 		$location = $row['location'];
+		$userID = 	$row['userID'];
 		$description = $row['content'];
-		$postcards .= '<figure>
-							<img src="showImage.php?ID=' . $row['ID'] . '" alt="postcard-picture" class="postcard-picture">
+		$postcards .= '<figure class="postcardbox">
+							<img src="showImage.php?ID=' . $row['ID'] . '" alt="event-picture" class="postcard-picture">
 							<figcaption>
 								<h3>' . $title . '</h3>
-								<span>' . $row['ID'] . '</span>
+								<p class="content">' . $description . '</p>
+								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $userID . '</a></p>
 							</figcaption>
 						</figure>';
 	}

@@ -41,11 +41,6 @@
 
 				<input type="text" name="title" placeholder="Title" required autofocus />
 			
-				<a href="m.addPicture.php">
-					<div class="photobox">
-						<p>Add Photo</p>
-					</div>
-				</a>
 				<input id="user-picture-upload" type="file" name="user-picture" value="Choose picture">
 
 				<input type="text" name="location" placeholder="Location" required autofocus />

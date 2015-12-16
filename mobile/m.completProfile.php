@@ -1,3 +1,4 @@
+<?php include 'getUserProfile.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,26 +43,35 @@
             <h1>Complete your profile</h1>
 
             <div id="completProfile">
-            	
+            	<?php
+                $traveler = "";
+                $local = "";
+
+                if($row["role"] == 'traveler'){
+                    $traveler = 'checked = "checked"';
+                } else{
+                    $local = 'checked = "checked"';
+                }
+                ?>
                 <form method="post" enctype="multipart/form-data" action="updateUser.php">
                 	
                     <div class="row">
                         <div class="col-xs-6">
                             <p class="checkboxText">
-                                <input type="checkbox" name="role" value="traveler" id="checkbox1">I'm a traveller
+                                <input type="checkbox" name="role" value="traveler" id="checkbox1" <? echo $traveler; ?>>I'm a traveler
                             </p>
                         </div>
 
                         <div class="col-xs-6">
                             <p class="checkboxText">
-                                <input type="checkbox" name="role" value="local" id="checkbox2">I'm a local
+                                <input type="checkbox" name="role" value="local" id="checkbox2" <? echo $local; ?>>I'm a local
                             </p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-4">
-                            <figure><img src="img/image-preview.png" id="signup-profile-picture"></figure>
+                            <figure><img src="showImageProfile.php?ID=<? echo $row['ID']; ?>" id="signup-profile-picture"></figure>
                         </div>
 
                         <div class="col-xs-7">
@@ -76,14 +86,18 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <select name="country" placeholder="Yor nationality">
-                                <?php include_once('getCountries.php'); ?>
+                                <?php 
+                                include_once('getCountries.php');
+                                echo "<option value='" . $row["country"] . "' selected='selected'>" . $row["country"] . "</option>";
+
+                                ?>
                             </select>
                         </div>
                     </div>
                     <br />
                     <div class="row">
                         <div class="col-xs-12">    
-                            <textarea name="description" placeholder="Write a short description"></textarea>
+                            <textarea name="description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
                         </div>
                     </div>
                 

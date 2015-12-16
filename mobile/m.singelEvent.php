@@ -40,19 +40,7 @@
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-xs-12">
-                    
-                    <form role="search" id="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Search">
-                        </div>
-                    </form>
-                
-                </div>
-            </div>
-
-            <?php include 'getEvents.php'; ?>
+            <?php include 'getSingelEvents.php'; ?>
     
     <footer>
         <div class="row">

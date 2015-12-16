@@ -42,7 +42,7 @@
 				</div>
 			</div>
 
-			<?php include 'getUserPostcards.php'; ?>
+			<?php include 'getYourPostcards.php'; ?>
 
 
 		</div>
