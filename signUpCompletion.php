@@ -41,7 +41,12 @@
 					<div class="col-md-5">
 						<div id="nationality-and-description">
 							<select name="user-nationality">
+<<<<<<< HEAD
 								<option selected disabled placeholder="Your nationality" ><li id="nationality">Your nationality </li></option>
+=======
+								<option selected disabled>Your nationality</option>
+								<?php include_once('getCountries.php'); ?>
+>>>>>>> origin/master
 							</select><br>
 							<textarea name="user-description" placeholder="Write a short description"></textarea>
 						</div>

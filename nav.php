@@ -7,16 +7,12 @@
 	}
 ?>
 
-
-<?php echo '
-
-	<nav id="nav-out" class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
-			</div>
-			<div>' . $nav . '</div>
+<nav id="nav-out" class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
 		</div>
-	</nav>';
+		<div><?php echo $nav; ?></div>
+	</div>
+</nav>
 	
-?>

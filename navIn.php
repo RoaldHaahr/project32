@@ -1,4 +1,4 @@
-	<ul class="nav navbar-nav">
+<ul class="nav navbar-nav">
 		<li><a href="index.php">Home</a></li>
 		<li><a href="postcards.php">Postcards</a></li>
 		<li><a href="events.php">Events</a></li> 
