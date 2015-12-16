@@ -1,3 +1,4 @@
+<?php $page=homepage; ?>
 <?php include_once('header.php'); ?>
 
 	<nav id="front-page" class="navbar navbar-default">
@@ -6,13 +7,29 @@
 				<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
 			</div>
 			<div>
-				<ul class="nav navbar-nav">
+            <?php
+	session_start();
+	if(isset($_SESSION['loggedOn'])) {
+		echo '	<ul class="nav navbar-nav">
+					<li><a href="index.php">Home</a></li>
+		<li><a href="postcards.php">Postcards</a></li>
+		<li><a href="events.php">Events</a></li> 
+		<li><a href="">My Diary</a></li>
+		<li><a href="logout.php">Log out</a></li>
+		<li><a href="myProfile.php" id="nav-profile-picture"><img src="images/michaelwhite.png"></a></li>
+		<li><a class="box-btn" href="createPostcard.php">ADD NEW</a></li> 
+				</ul>
+				';
+	}
+			else {
+			echo '		<ul class="nav navbar-nav">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="postcards.php">Postcards</a></li>
 					<li><a href="events.php">Events</a></li> 
 					<li><a href="login.php">Log in</a></li>
 					<li><a class="box-btn" href="signUp.php">Sign up</a></li> 
 				</ul>
+				'; }?>
 			</div>
 		</div>
 	</nav>
