@@ -697,7 +697,10 @@ section#postcards-page {
 	padding: 104px 0;
 	background-color: #f3f3f3;
 }
-
+.like{
+	cursor:pointer;
+	    text-align: left;
+	}
 /**
 *
 *
