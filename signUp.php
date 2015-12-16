@@ -18,7 +18,7 @@
                             <input type="password" class="signup-field form-control" name="password" placeholder="Your password">
                         </p>
                         <p>
-                            <input type="submit" class="signup-btn btn btn-default" value="SIGN UP">
+                            <input type="submit" class="link-button yellow-link" value="SIGN UP">
                         </p>
                         <p>
                             <a class="social-media-signup" id="fb-signup" href="#"><span>Sign up with Facebook</span></a>

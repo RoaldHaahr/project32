@@ -17,7 +17,7 @@
                             <input type="password" class="login-field form-control" name="password" placeholder="Your password">
                         </p>
                         <p>
-                            <input type="submit" class="login-btn btn btn-default" value="LOG IN">
+                            <input type="submit" class="link-button yellow-link" value="LOG IN">
                         </p>
                         <p>
                             <a class="social-media-login" id="fb-login" href="#"><span>Log in with Facebook</span></a>

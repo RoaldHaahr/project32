@@ -31,7 +31,8 @@
 						<label for="user-picture">
 							Upload your profile picture
 						</label>
-						<div id="user-picture-btn"><input id="user-picture-upload" type="file" name="user-picture" value="Choose picture"></div>
+						
+                        <input id="user-picture-upload" type="file" name="user-picture" value="Choose picture" >
 					</div>
 					<div class="col-md-5">
 						<p id="nationality-and-description">
