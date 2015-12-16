@@ -1,4 +1,4 @@
-<?php $page="signup"; ?>
+<?php $page='signup'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 

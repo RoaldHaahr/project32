@@ -1,4 +1,4 @@
-<?php $page=userprofile; ?>
+<?php $page='userprofile'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 

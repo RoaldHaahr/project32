@@ -14,7 +14,7 @@
 		echo "Server error - try again! " . $e->getMessage();
 	}
 
-	header('Location: /project32/signUpCompletion.php');
+	header('Location:' . 'signUpCompletion.php');
 
 	$conn = null;
 

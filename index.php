@@ -1,4 +1,4 @@
-<?php $page=homepage; ?>
+<?php $page='homepage'; ?>
 <?php include_once('header.php'); ?>
 
 	<nav id="front-page" class="navbar navbar-default">

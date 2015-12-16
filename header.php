@@ -5,33 +5,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 
-		<title>Tell A Story <?php if($page==homepage)
+		<title>Tell A Story <?php if($page=='homepage')
 		echo "- From Aarhus with love";
-		else if($page==events)
+		else if($page=='events')
 		echo "- Events in Aarhus";
-		else if($page==postcards)
+		else if($page=='postcards')
 		echo "- Stories from Aarhus";
-		else if($page==myprofile)
+		else if($page=='myprofile')
 		echo "- You profile";
-		else if($page==userprofile)
+		else if($page=='userprofile')
 		echo "- User profile";
-		else if($page==login)
+		else if($page=='login')
 		echo "- Log in";
-		else if($page==signup)
+		else if($page=='signup')
 		echo "- Join us";
 		 ?></title>
          
-         <meta name="description" content="<?php if($page==homepage)
+         <meta name="description" content="<?php if($page=='homepage')
 		echo "- Share you experiences from Aarhus with all your friends and win prizes. Postcards from Aarhus is the new black";
-		else if($page==events)
+		else if($page=='events')
 		echo "Experience the local culture of Aarhus and meet local people.";
-		else if($page==postcards)
+		else if($page=='postcards')
 		echo "See what other people have been doing in Aarhus. Best way to get inspiration for your trip";
-		else if($page==myprofile)
+		else if($page=='myprofile')
 		echo "Make changes to your profile";
-		else if($page==userprofile)
+		else if($page=='userprofile')
 		echo "See people who've been to Aarhus or live here";
-		else if($page==signup)
+		else if($page=='signup')
 		echo "Join us and show your loved one that you are thinkin of them by sending them a special postcard";
 		 ?>" >
 

@@ -1,4 +1,4 @@
-<?php $page=events; ?>
+<?php $page='events'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 

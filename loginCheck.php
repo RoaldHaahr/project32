@@ -18,9 +18,9 @@
 		$_SESSION["loggedOn"] = 1;
 		$_SESSION["userID"] = $row["id"];
 		$_SESSION["role"] = $row["role"];
-		header('Location: ' . '/myProfile.php');
+		header('Location: ' . 'myProfile.php');
 	} else {
-		header('Location: ' . '/login.php');
+		header('Location: ' . 'login.php');
 	};
 
 	$conn=null; //disconnect to server
