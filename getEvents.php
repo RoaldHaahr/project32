@@ -1,7 +1,7 @@
 <?php
 	include_once('connection.php');
 
-	$sql = "SELECT event_name_0, event_description, event_date, event_image_url, filetype, image FROM events";
+	$sql = "SELECT event_name_0, event_description, event_date, event_image_url, filetype, image FROM events ORDER BY event_date DESC";
 
 	try {
 		$st = $conn->prepare($sql);
