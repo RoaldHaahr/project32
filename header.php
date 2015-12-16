@@ -1,5 +1,3 @@
-<?php echo '
-
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -14,6 +12,4 @@
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
 
 	</head>
-	<body>';
-	
-?>
+	<body>
