@@ -84,6 +84,28 @@ section#home {
 	text-align: center;
 }
 
+#slider-box {
+	box-shadow:none;
+	width: 800px;
+}
+.carousel-control.right {
+	background-image:none;
+	margin-right: -150px;
+	
+}
+.carousel-control.left {
+	background-image:none;
+	margin-left: -150px;
+	font-size:1em;
+	font-weight:100;
+}
+
+.glyphicon {
+	font-weight:100;
+	font-size:0.2em;
+}
+
+
 /**
 * Typography
 *
@@ -243,12 +265,7 @@ section#home .col-md-2 a:hover {
 section#home .col-md-2 span {
 	margin-top: 37vh;
 }
-.second {
-	display:none;
-}
-.third {
-	display:none;
-}
+
 
 /**
 * Sign up and Login

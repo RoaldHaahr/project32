@@ -10,7 +10,7 @@
 <nav id="nav-out" class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="http://tellastory.roaldhaahr.com/"><img src="images/logogif.gif"></a>
+			<a class="navbar-brand" href="index.php"><img src="images/logogif.gif"></a>
 		</div>
 		<div><?php include_once($nav); ?></div>
 	</div>
