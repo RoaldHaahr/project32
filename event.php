@@ -23,13 +23,16 @@
 						<div class="event-info">
 							<time class="event-time">Tuesday, December 22, 2015</time><br>
 							<span class="event-place">Aarhus C</span>
-							<p>
+							<p id="event-text">
 								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 							</p>
 						</div>
 					</div>
 					<div class="col-md-2"></div>
 				</div>
+                <div class="row">
+                	<a href="#"id="guide-button"> Become a guide! </a>
+                </div>
 				<div class="row">
 					<div class="col-md-12">
 						<h4 class="local-folks-title">Local folks who can guide you during the event.<br>Get in touch with them!</h4>

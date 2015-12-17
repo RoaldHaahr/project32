@@ -16,8 +16,8 @@
 							<div id="postcard-image">
 								<img src="images/xbox.png">
 							</div>
-							<textarea name="story" id="story" placeholder="Your story"></textarea>
-							<input type="text" placeholder="Tags, places, etc.">
+							<textarea name="story" class="story" placeholder="Your story"></textarea>
+							<input type="text" class="story" placeholder="Tags, places, etc.">
 						</div>
 						<div class="col-md-7">
 							<div id="pre-image">
@@ -34,6 +34,7 @@
 							<div id="choose-postcard-image">
 								<h3>or</h3>
 								<div id="user-picture-btn">
+                                <p id="user-picture-text"> Choose from your picture </p>
 									<input type="file" name="postcard-picture" id="user-picture-upload">
 								</div>
 							</div>

@@ -406,7 +406,7 @@ label[for=user-picture] {
 	width: 100%;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
-	margin-left: 40px;
+	padding-right: 7000px;
 	
 }
 
@@ -419,6 +419,7 @@ label[for=user-picture] {
 	opacity: 0;
 	overflow: hidden;
 	cursor: pointer;
+	margin-right: -600px;
 }
 
 #choose-picture {
@@ -469,6 +470,7 @@ section#loggedin-user-profile-page {
 	padding: 104px 0;
 	background-color: #f3f3f3;
 	text-align: center;
+	height: auto;
 }
 
 section#loggedin-user-profile-page .page-title {
@@ -567,6 +569,7 @@ form#contact-form input[type=submit] {
 section#event-page {
 	padding: 104px 0;
 	background-color: #f3f3f3;
+	height: auto;
 }
 
 section#event-page .event-picture {
@@ -580,7 +583,7 @@ section#event-page .event-time, section#event-page .event-place {
 	margin-bottom: 10px;
 	padding-left: 70px;
 	height: 42px;
-	font-size: 30px;
+	font-size: 18px;
 	color: #b6323b;
 }
 
@@ -594,14 +597,31 @@ section#event-page .event-place {
 
 section#event-page .local-folks-title {
 	margin: 70px 0 50px;
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
 }
-
+#event-text {
+	padding-bottom: 50px;
+}
 .locals {
 	text-align: center;
 }
-
+section#guide-button {
+	padding-top:200px;
+}
+#guide-button {
+	border:1px solid #f69b46;
+	color: white;
+	background-color:#f69b46;
+	margin-left: 60%;
+	padding: 15px 50px;
+	padding-top: 20px;
+	text-decoration:none;
+	text-align:center;
+	font-weight: 100;
+	font-size: 1.2em;
+	
+}
 /**
 * Create new event
 *
@@ -678,6 +698,7 @@ section#goodbye-page p#goodbye {
 section#create-postcard-page {
 	padding: 104px 0;
 	background-color: #f3f3f3;	
+	height: auto;
 }
 
 form#create-postcard-form {
@@ -707,11 +728,32 @@ div#pre-image p img {
 	height: 137px;
 }
 
-textarea#story {
+textarea.story {
 	width: 382px;
 	height: 378px;
+	
+}
+.story {
+	text-indent:0px;
+}
+#user-picture-upload {
+	height: 50px;
+	width: 100%;
+	padding-bottom: 0px;
+	text-align: center;
 }
 
+#user-picture-btn {
+	margin-left: 250px;
+	
+}
+
+#user-picture-text {
+	color: white;
+	margin-left: -500px;
+	font-size: 1em;
+	padding-top: 40px;
+}
 /**
 * Postcards page
 *
