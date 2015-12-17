@@ -8,7 +8,7 @@
 	session_start();
 
 	if(!empty($_SESSION['userID'])) {
-		if($_SESSION['role'] == 'traveler') {
+		if($_SESSION['role'] == 'Tourist') {
 
 			$sql = "INSERT INTO postcards (userID, date, location, content, tags, type, title, picture, filetype)
 			VALUES (:userID, :date, :location, :content, :tags, :type, :title,'" . $image . "','" . $imageProperties['mime'] . "')";
@@ -23,7 +23,6 @@
 				$st->bindValue(":type",$_POST["privacy"], PDO::PARAM_STR);
 				$st->bindValue(":title",$_POST["title"], PDO::PARAM_STR);
 				$st->execute();
-				echo "userID: " . $_SESSION['userID'] . " logged in? " . $_SESSION["loggedOn"];
 			} catch(PDOException $e) {
 				echo "Server Error - Try again!".$e->getMessage();
 			}
