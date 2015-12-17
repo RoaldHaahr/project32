@@ -9,7 +9,7 @@
 
 	session_start();
 
-	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'];
+	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
 
 	try {
 		$st = $conn->prepare($sql);
