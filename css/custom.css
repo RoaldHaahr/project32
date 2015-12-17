@@ -355,7 +355,7 @@ form#signup-completion-form p {
 }
 
 /* http://stackoverflow.com/questions/1120879/css-checkbox-input-styling (10/12/2015) */
-form#signup-completion-form .role-radio input {
+input[type=radio] {
 	margin-right: 16px;
 	padding: 0 5px;
 	border-radius: 100%;
@@ -367,7 +367,7 @@ form#signup-completion-form .role-radio input {
 	outline: none;
 }
 
-form#signup-completion-form .role-radio input:checked {
+input[type=radio]:checked {
 	background: url('../images/tick-icon.png') no-repeat 7px #d4abac;
 }
 
@@ -403,10 +403,9 @@ label[for=user-picture] {
 /* http://jsfiddle.net/gabrieleromanato/mxq9R/ (10/12/2015) */
 #user-picture-btn {
 	margin: 12px auto;
-	width: 100%;
+	width: 234px;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
-	padding-right: 7000px;
 	
 }
 
@@ -423,15 +422,12 @@ label[for=user-picture] {
 }
 
 #choose-picture {
-	margin-top:40px;
-	margin-left: -70px;
-	padding-top: 30px;
+	padding-top: 34px;
 	color:white;
 	font-size: 18px;
 	opacity: 0.6;
 	
 }
-
 
 #nationality-and-description * {
 	width: 100%;
@@ -666,6 +662,10 @@ div#create-event-picture input {
 	opacity: 0;
 }
 
+div#privacy {
+	text-align: center;
+}
+
 form#create-event-form input[type=submit] {
 	margin-top: 60px;
 }
@@ -706,6 +706,11 @@ form#create-postcard-form {
 	width: 1280px;
 }
 
+input#postcard-title {
+	margin-bottom: 8px;
+	width: 382px;
+}
+
 div#postcard-image {
 	width: 382px;
 	height: 192px;
@@ -738,22 +743,20 @@ textarea.story {
 }
 #user-picture-upload {
 	height: 50px;
-	width: 100%;
+	width: 234px;
 	padding-bottom: 0px;
 	text-align: center;
 }
 
-#user-picture-btn {
-	margin-left: 250px;
-	
+#user-picture-text {
+	position: relative;
+	top: 40px;
+	color: white;
+	font-size: 1em;
 }
 
-#user-picture-text {
-	color: white;
-	margin-left: -500px;
-	font-size: 1em;
-	padding-top: 40px;
-}
+#create-postcard-form input[type=submit] {
+	margin-top: 40px;}
 /**
 * Postcards page
 *
