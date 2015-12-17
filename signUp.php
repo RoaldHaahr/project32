@@ -12,7 +12,7 @@
                     <form id="signup-form" role="form" method="post" enctype="multipart/form-data" action="addUser.php">
                         <h2>Sign up</h2>
                         <p id="signup-email" class="form-group">
-                            <input type="text" class="signup-field form-control" name="username" placeholder="Your email" autofocus>
+                            <input type="email" class="signup-field form-control" name="email" placeholder="Your email" autofocus>
                         </p>
                         <p id="signup-password" class="form-group">
                             <input type="password" class="signup-field form-control" name="password" placeholder="Your password">

@@ -13,7 +13,7 @@
                     <form id="login-form" role="form" method="post" enctype="multipart/form-data" action="loginCheck.php">
                         <h2>Log in</h2>
                         <p id="login-email" class="form-group">
-                            <input type="text" class="login-field form-control" name="username" placeholder="Your email" autofocus>
+                            <input type="email" class="login-field form-control" name="email" placeholder="Your email" autofocus>
                         </p>
                         <p id="login-password" class="form-group">
                             <input type="password" class="login-field form-control" name="password" placeholder="Your password">
