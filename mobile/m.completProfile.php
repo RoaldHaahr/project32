@@ -58,13 +58,13 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <p class="checkboxText">
-                                <input type="checkbox" name="role" value="tourist" id="checkbox1" <? echo $tourist; ?>>I'm a tourist
+                                <input type="checkbox" name="role" value="Tourist" id="checkbox1" <? echo $tourist; ?>>I'm a tourist
                             </p>
                         </div>
 
                         <div class="col-xs-6">
                             <p class="checkboxText">
-                                <input type="checkbox" name="role" value="local" id="checkbox2" <? echo $local; ?>>I'm a local
+                                <input type="checkbox" name="role" value="Local" id="checkbox2" <? echo $local; ?>>I'm a local
                             </p>
                         </div>
                     </div>

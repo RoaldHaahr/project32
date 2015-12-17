@@ -2,7 +2,7 @@
 error_reporting(E_ALL); ini_set('display_errors', 1);
 	include_once('connection.php');
 
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type=1";
+	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type = 1 AND userID = " . $_GET['ID'];
 
 		$st = $conn->prepare($sql);
 		$st->execute();
