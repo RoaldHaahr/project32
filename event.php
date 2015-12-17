@@ -83,7 +83,7 @@ if ($_SESSION['role'] == 'Local' && $eventss == 0) {
 	                	<a href="#" id="guide-button"> Become a guide! </a>
 	                </div>
                 <?php
-} else {
+} 
     $sql3 = $conn->prepare("SELECT lid, eid FROM eventslocals WHERE  eid=$eid");
     $sql3->execute();
     $rowsloc = $sql3->fetchAll();
@@ -105,7 +105,7 @@ if ($_SESSION['role'] == 'Local' && $eventss == 0) {
 					</div>';
 
     }
-}
+
 ?>
 				
 
