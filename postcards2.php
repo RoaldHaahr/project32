@@ -1,16 +1,29 @@
-<?php $page=postcards; ?>
-<?php include_once('header.php'); ?>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Caption Hover Effects - Demo 1</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<script src="js/modernizr.custom.js"></script>
+	</head>
 	<body>
-	<script>
-	$( "html" ).addClass( "no-js" );
-	</script>
-	<script src="js/modernizr.custom.js"></script>
+	
 		<?php include_once('nav.php'); ?>
 		<section id="postcards-page" class="container demo-1 page">
 			<!-- Top Navigation -->
 			
 			<ul class="grid cs-style-1">
-				<?php require('getPostcards2.php'); ?>
+				<?php require('getPostcards.php'); ?>
 				<li>
 					<figure>
 						<img src="images/1.png" alt="img01">

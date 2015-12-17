@@ -25,7 +25,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<figure id="signup-profile-picture"><img src="images/image-preview.png"></figure>
+						<figure id="signup-profile-picture"><img src="images/image-preview.png" alt="Profile picture"></figure>
 					</div>
 					<div class="col-md-4">
 						<label for="user-picture">
