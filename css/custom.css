@@ -104,7 +104,9 @@ section#home {
 a, .navbar-default .navbar-nav>li>a {
 	font-family: 'Source Sans Pro';
 }
-
+.navbar-brand>img {
+    margin-top: -15px;
+}
 .navbar-default .navbar-nav>li>a {
 	font-size: 18px;
 	color: #fff;
