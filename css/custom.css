@@ -531,7 +531,7 @@ section#loggedin-user-profile-page .page-title {
 	margin-bottom: 40px;
 }
 
-figure.profile-picture {
+.profile-picture {
 	margin: auto;
 	width: 220px;
 	height: 220px;
