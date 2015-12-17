@@ -4,6 +4,17 @@
 
 	<section class="page" id="signup-completion-page">
 		
+		<?php
+            $name = $row['name'];
+            $tourist = "";
+            $local = "";
+
+            if($row["role"] == 'tourist'){
+                $tourist = 'checked = "checked"';
+            } else{
+                $local = 'checked = "checked"';
+            }
+        ?>
 		<form id="signup-completion-form" action="updateUser.php" method="post" enctype="multipart/form-data">
 			<div class="container-fluid">
 				
@@ -12,21 +23,30 @@
 						<h2 class="page-title">Complete your profile</h2>
 					</div>
 				</div>
+				 <div class="row">
+                    <div class="col-md-2">
+                        <p>Name: </p>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="name" value="<? echo $row['name']; ?>" >
+                    </div>
+                </div>
 				<div class="row">
 					<div class="col-md-6">
 						<p class="role-radio" id="tourist-radio">
-							<input type="radio" name="role" value="Tourist">I'm a tourist
+							<input type="radio" name="role" value="Tourist" <? echo $tourist; ?>>I'm a tourist
 						</p>
 					</div>
 					<div class="col-md-6">
 						<p class="role-radio" id="local-radio">
-							<input type="radio" name="role" value="Local">I'm a Local
+							<input type="radio" name="role" value="Local" <? echo $local; ?>>I'm a local
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<figure id="signup-profile-picture"><img src="images/image-preview.png" alt="Profile picture"></figure>
+						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<? echo $row['ID']; ?>" alt="Profile picture"></figure>
+
 					</div>
 					<div class="col-md-4">
 						<label for="user-picture">
@@ -44,10 +64,12 @@
 							<select name="user-nationality">
 
 								<option selected disabled>Your nationality</option>
-								<?php include_once('getCountries.php'); ?>
+								<?php include_once('getCountries.php'); 
+								echo "<option value='" . $row["country"] . "' selected='selected'>" . $row["country"] . "</option>";
+								?>
 
 							</select><br>
-							<textarea name="user-description" placeholder="Write a short description"></textarea>
+							<textarea name="user-description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
 						</div>
 					</div>
 				</div>
