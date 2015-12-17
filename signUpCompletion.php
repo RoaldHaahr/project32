@@ -18,8 +18,8 @@
 						</p>
 					</div>
 					<div class="col-md-6">
-						<p class="role-radio" id="traveler-radio">
-							<input type="radio" name="role" value="Traveler">I'm a traveler
+						<p class="role-radio" id="local-radio">
+							<input type="radio" name="role" value="Local">I'm a Local
 						</p>
 					</div>
 				</div>
