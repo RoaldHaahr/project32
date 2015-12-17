@@ -17,6 +17,7 @@
 				$row = $st->fetch();
 			} catch (PDOException $e) {
 				echo "Server error - try again!<br>" . $e->getMessage();
+			}
 
             $name = $row['name'];
             $tourist = "";
