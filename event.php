@@ -50,18 +50,24 @@
 					</div>
 					<div class="col-md-2"></div>
 				</div>
-                <div class="row">
-                	<a href="#"id="guide-button"> Become a guide! </a>
-                </div>
-				<div class="row">
-					<div class="col-md-12">
-						<h4 class="local-folks-title">Local folks who can guide you during the event.<br>Get in touch with them!</h4>
-					</div>
+                
 
-				</div>
-				<div class="row">
-					<div class="col-md-12"><figure class="locals"><img src="images/local-guides.png"></figure></div>
-				</div>
+                <?php if($_SESSION['role'] == 'Local') { ?>
+                	<div class="row">
+	                	<a href="#"id="guide-button"> Become a guide! </a>
+	                </div>
+                <?php } else { ?>
+                	<div class="row">
+						<div class="col-md-12">
+							<h4 class="local-folks-title">Local folks who can guide you during the event.<br>Get in touch with them!</h4>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-12" id="guide-links"><figure class="locals"><img src="images/local-guides.png"></figure></div>
+					</div>
+                <?php } ?>
+				
 
 			</div>
 
