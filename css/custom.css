@@ -406,7 +406,7 @@ label[for=user-picture] {
 	width: 100%;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
-	padding-right: 7000px;
+	
 	
 }
 
@@ -458,6 +458,7 @@ form#signup-completion-form input[type=submit] {
 	background-color: #ffa200;
 	border: none;
 	text-indent:0px;
+	color:white;
 }
 
 /**
