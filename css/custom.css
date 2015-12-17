@@ -417,10 +417,7 @@ label[for=user-picture] {
 	width: 234px;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/master
+
 	
 }
 
@@ -494,6 +491,7 @@ figure.profile-picture {
 	width: 220px;
 	height: 220px;
 	overflow: hidden;
+	border-radius:100%;
 }
 
 figure.profile-picture img {
