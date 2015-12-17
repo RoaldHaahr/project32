@@ -6,13 +6,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="jquery.alt-checkbox.js"></script>
 
-
-        <style>
-            html, body{
-                background-color: #eee;
-            }
-        </style>
-
     </head>
 
     <body>

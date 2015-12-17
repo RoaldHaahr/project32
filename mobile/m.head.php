@@ -7,10 +7,13 @@
 
         <title>Tell a Story</title>
 
-        <link rel="stylesheet" href="bootstrap.min.css" />
-        <link rel="stylesheet" href="jquery.alt-checkbox.icon-font.css">
-        <link rel="stylesheet" href="jquery.alt-checkbox.css">
-        <link rel="stylesheet" href="m.style.css" />
-        <link rel="stylesheet" href="modalStyle.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/jquery.alt-checkbox.icon-font.css">
+        <link rel="stylesheet" href="css/jquery.alt-checkbox.css">
+        <link rel="stylesheet" href="css/m.style.css" />
+        <link rel="stylesheet" href="css/modalStyle.css" />
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+        
 
     </head>

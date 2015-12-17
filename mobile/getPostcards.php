@@ -75,13 +75,8 @@ else{
 	echo $postcards;
 	$conn = "";
 ?>
-<script src="js/jssocials-1.0.0/jquery.js"></script>
-    <script src="js/jssocials-1.0.0/jssocials.min.js"></script>
-    <script>
-        $(".share").jsSocials({
-            shares: ["email", "twitter", "facebook", "googleplus", "pinterest"]
-        });
 
+<script src="jquery-2.1.4.min.js">   
 
 var that;
 $(document).ready(function(){
