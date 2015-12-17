@@ -406,6 +406,10 @@ label[for=user-picture] {
 	width: 234px;
 	height: auto;
 	background: url('../images/choosepicture.png') no-repeat;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> origin/master
 	
 }
 
@@ -454,6 +458,7 @@ form#signup-completion-form input[type=submit] {
 	background-color: #ffa200;
 	border: none;
 	text-indent:0px;
+	color:white;
 }
 
 /**
