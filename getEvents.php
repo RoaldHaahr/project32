@@ -1,7 +1,7 @@
 <?php
 	include_once('connection.php');
 
-	$sql = "SELECT event_name_0, event_description, event_date, event_image_url, filetype, image FROM events ORDER BY event_date DESC";
+	$sql = "SELECT ID, event_name_0, event_description, event_date, event_image_url, filetype, image FROM events ORDER BY event_date DESC";
 
 	try {
 		$st = $conn->prepare($sql);
@@ -17,7 +17,7 @@
 		$name = $row['event_name_0'];
 		$date = $row['event_date'];
 		$description = $row['event_description'];
-		$image = $row['event_image_url'];
+		$image = (empty($row['event_image_url'] ? 'showEventImage.php?ID=' . $row['ID'] : $row['event_image_url']));
 
 		if(strtotime(date('d F Y', strtotime('01 November 2015'))) < $date ) {
 
