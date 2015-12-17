@@ -5,7 +5,7 @@
 		
 			<div class="container-fluid">
 				
-				<form action="addPostcard.php" method="post" id="create-postcard-form" enctype="multipart/enctype">
+				<form action="addPostcard.php" method="post" id="create-postcard-form" enctype="multipart/form-data">
 					<div class="row">
 						<div class="col-md-12">
 							<h2 class="page-title">Create a new postcard</h2>
@@ -14,11 +14,11 @@
 					<div class="row">
 						<div class="col-md-5">
 							<input type="text" name="title" id="postcard-title" placeholder="Postcard title">
-							<div id="postcard-image">
+							<figure id="postcard-image">
 								<img src="images/xbox.png">
-							</div>
+							</figure>
 							<textarea name="story" class="story" placeholder="Your story"></textarea>
-							<input type="text" class="story" placeholder="Tags, places, etc.">
+							<input type="text" class="story" placeholder="Tags, places, etc." name="tags">
 						</div>
 						<div class="col-md-7">
 							<div id="pre-image">
@@ -36,7 +36,7 @@
 								<h3>or</h3>
 								<div id="user-picture-btn">
                                 <p id="user-picture-text"> Choose from your picture </p>
-									<input type="file" name="postcard-picture" id="user-picture-upload">
+									<input type="file" name="image" id="user-picture-upload" />
 								</div>
 							</div>
 							<div id="privacy">

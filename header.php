@@ -45,6 +45,11 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
+        
+        <!-- Share plugin -->
+         <link rel="stylesheet" type="text/css" href="font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="js/jssocials-1.0.0/jssocials.css" />
+    <link rel="stylesheet" type="text/css" href="js/jssocials-1.0.0/jssocials-theme-flat.css" />
 
 	</head>
 	<body>
