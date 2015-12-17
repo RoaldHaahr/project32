@@ -26,7 +26,7 @@
 					<div class="col-md-4">
 						<time>' . date('M d, Y', $date) . '</time>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 event-picture">
 						<img class="events-picture" src="' . $image . '" alt="">
 					</div>
 					<div class="col-md-4">

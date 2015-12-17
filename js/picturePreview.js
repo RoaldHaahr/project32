@@ -1,5 +1,3 @@
-// http://jsfiddle.net/LvsYc/ (10/12/2015)
-
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -12,6 +10,8 @@ function readURL(input) {
     }
 }
 
-$("#user-picture-btn input").change(function(){
+$("input#user-picture-upload").change(function(){
     readURL(this);
 });
+
+// http://jsfiddle.net/LvsYc/ (10/12/2015)

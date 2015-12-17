@@ -1,6 +1,24 @@
-<?php $page=myprofile; ?>
+<?php
+	$page='myprofile';
+?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
+
+<?php
+	include_once('connection.php');
+
+	session_start();
+
+	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'];
+
+	try {
+		$st = $conn->prepare($sql);
+		$st->execute();
+		$row = $st->fetch();
+	} catch (PDOException $e) {
+		echo "Server error - try again!<br>" . $e->getMessage();
+	}
+?>
 
 	<section class="page" id="loggedin-user-profile-page">
 		
@@ -8,31 +26,31 @@
 				
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title">Michael White</h2>
+						<h2 class="page-title"><?php echo $row['name']; ?></h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
 						<figure class="profile-picture">
-							<img src="images/michaelwhite.png">
+							<img src="showProfilePicture.php?ID=<?php echo $row['ID']; ?>">
 						</figure>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<h4 class="user-role">-Tourist-</h4>
+						<h4 class="user-role">-<?php echo $row['role']; ?>-</h4>
 						<p id="user-description">
-							Graphic designer and art lover. I travel to meet new inspiring people and to admire architecture and art. I love to write short stories about places I visited.
+							<?php echo $row['description']; ?>
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12" id="user-information">
 						<p>
-							<strong>E-mail: </strong>m.white@gmail.com
+							<strong>E-mail: </strong><?php echo $row['email'];  ?>
 						</p>
 						<p>
-							<strong>Nationality: </strong>French
+							<strong>Nationality: </strong><?php echo $row['country']; ?>
 						</p>
 					</div>
 				</div>

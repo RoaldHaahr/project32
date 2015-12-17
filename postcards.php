@@ -10,7 +10,7 @@
 			<!-- Top Navigation -->
 			
 			<ul class="grid cs-style-1">
-				<?php require('getPostcards.php'); ?>
+				<?php require('getPostcards2.php'); ?>
 				<li>
 					<figure>
 						<img src="images/1.png" alt="img01">

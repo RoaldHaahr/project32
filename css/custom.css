@@ -42,14 +42,13 @@ input[type=text], input[type=date] {
 	height: 51px;
 }
 
-textarea, input[type=text] {
-	text-indent: 44px;
+textarea, input {
+	text-indent: 42px;
 }
 
 a:hover {
 	color: #fff;
 	text-decoration: none;
-	text-shadow: 0 0 5px #fff;
 }
 
 /**
@@ -107,15 +106,18 @@ a, .navbar-default .navbar-nav>li>a {
 }
 
 .navbar-default .navbar-nav>li>a {
-	font-size: 20px;
+	font-size: 18px;
 	color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
 	color: #fff;
 	font-weight: bolder;
+	text-decoration:none;
 }
-
+.navbar-default .navbar-nav>li>a:active {
+	color: white;
+}
 .slogan {
 	margin-bottom: 26px;
 	font-family: Pacifico;
@@ -136,8 +138,9 @@ a, .navbar-default .navbar-nav>li>a {
 	border-radius: 0;
 }
 
-.navbar a:link, .navbar a:visited,  {
+.navbar a:link, .navbar a:visited  {
 	color: #fff;
+	text-decoration:none;
 }
 
 /* Front page nav */
@@ -148,11 +151,12 @@ nav#front-page {
 	background-color: transparent;
 	border: none;
 	z-index: 10;
+	margin-top: 15px;
 }
 
 nav#front-page .container-fluid {
 	margin: 0 3%;
-	padding: 24px;
+	padding: 3px;
 	border-bottom: 1px solid rgba(255, 255, 255, .13);
 }
 
@@ -161,7 +165,7 @@ nav#front-page .container-fluid {
 nav#nav-out {
 	position: fixed;
 	width: 100%;
-	height: 76px;
+	height: 60px;
 	background-color: #b6323b;
 	border: none;
 	border-bottom: 1px solid rgba(255, 255, 255, .13);
@@ -169,7 +173,7 @@ nav#nav-out {
 }
 
 nav#nav-out .container-fluid {
-	margin-top: 16px;
+	margin-top: 10px;
 }
 
 .navbar>.container-fluid .navbar-brand {
@@ -191,8 +195,8 @@ ul.navbar-nav li a {
 }
 
 ul.navbar-nav li a.box-btn {
-	border: 2px solid #fff;
-	border-radius: 5px;
+	border: 1px solid #fff;
+	border-radius: 3px;
 }
 
 ul.navbar-nav a#nav-profile-picture img {
@@ -201,7 +205,6 @@ ul.navbar-nav a#nav-profile-picture img {
 	width: 56px;
 	height: auto;
 }
-
 /**
 * Icons
 *
@@ -223,7 +226,6 @@ section#home a:link, section#home a:visited {
 
 section#home .col-md-2 a:hover {
 	color: #fff;
-	text-shadow: 0 0 5px #fff;
 	cursor: pointer;
 }
 
@@ -249,7 +251,7 @@ section#login-page, section#signup-page {
 
 form#login-form, form#signup-form {
 	margin: 166px auto 0;
-	width: 514px;
+	width: 400px;
 }
 
 form#login-form h2, form#signup-form h2 {
@@ -263,23 +265,25 @@ form#login-form input, a.social-media-login, form#signup-form input, a.social-me
 }
 
 input.login-field, input.signup-field {
-	padding-left: 80px;
-	height: 63px;
+	height: 40px;
 	font-family: 'Source Sans Pro';
-	font-size: 24px;
+	font-weight: 100;
+	font-size: 16px;
 	color: #3f3a3a;
 	background-color: #fff;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
 }
 
 p#login-email input, p#signup-email input {
 	background-image: url('../images/mail-icon.png');
-	background-position: 12px 10px;
+	background-position: 6px 5px;
+	background-size: 35px 25px;
 }
 
 p#login-password input, p#signup-password input {
 	background-image: url('../images/lock-icon.png');
-	background-position: 15px 8px;
+	background-position: 7px 4px;
+	background-size: 35px 27px;
 }
 
 input.login-btn, a.social-media-login, input.signup-btn, a.social-media-signup {
@@ -290,25 +294,27 @@ input.login-btn, a.social-media-login, input.signup-btn, a.social-media-signup {
 
 input.login-btn, input.signup-btn {
 	margin: 20px 0;
-	padding: 0;
-	height: 49px;
-	font-size: 36px;
+	height: 40px;
+	font-size: 20px;
 	background-color: #ffa200;
 	border: none;
+	text-indent:0px;
 }
 
 a.social-media-login, a.social-media-signup {
 	display: inline-block;
-	height: 67px;
-	font-size: 30px;
+	height: 40px;
+	font-size: 20px;
 }
 
 a#fb-login, a#fb-signup {
 	background: url('../images/facebook-icon-white.png') no-repeat 13px #384f86;
+	background-size: 30px 30px;
 }
 
 a#t-login, a#t-signup {
 	background: url('../images/twitter-icon-white.png') no-repeat 13px #3186c1;
+	background-size: 30px 30px;
 }
 
 a.social-media-login span, a.social-media-signup span {
@@ -325,6 +331,7 @@ a.social-media-login span, a.social-media-signup span {
 section#signup-completion-page {
 	background-color: #f3f3f3;
 	text-align: center;
+	height: auto;
 }
 
 form#signup-completion-form {
@@ -396,21 +403,34 @@ label[for=user-picture] {
 /* http://jsfiddle.net/gabrieleromanato/mxq9R/ (10/12/2015) */
 #user-picture-btn {
 	margin: 12px auto;
-	width: 196px;
-	height: 51px;
-	background: url('../images/choose-picture.png') no-repeat;
+	width: 100%;
+	height: auto;
+	background: url('../images/choosepicture.png') no-repeat;
+	margin-left: 40px;
+	
 }
 
 #user-picture-upload {
 	display: block;
-	width: 196px;
-	height: 51px;
+	width: 100%;
+	height: auto;
 	border-radius: 7px;
 	color: #e7e7e7;
 	opacity: 0;
 	overflow: hidden;
 	cursor: pointer;
 }
+
+#choose-picture {
+	margin-top:40px;
+	margin-left: -70px;
+	padding-top: 30px;
+	color:white;
+	font-size: 18px;
+	opacity: 0.6;
+	
+}
+
 
 #nationality-and-description * {
 	width: 100%;
@@ -420,18 +440,23 @@ label[for=user-picture] {
 #nationality-and-description select {
 	height: 51px;
 	background: url('../images/flag-icon.png') no-repeat 6px 10px;
+	text-align: center;
 }
 
 #nationality-and-description textarea {
 	background: url('../images/pen-icon.png') no-repeat 6px 10px;
 }
 
+#nationality {
+	text-align: right;
+}
 form#signup-completion-form input[type=submit] {
 	margin-top: 50px;
 	width: 290px;
 	height: 51px;
 	background-color: #ffa200;
 	border: none;
+	text-indent:0px;
 }
 
 /**
@@ -723,10 +748,15 @@ a.events-links {
 	font-size: 30px;
 	text-align: center;
 	color: #fff;
+	margin-left:-20px;
+ 	margin-right:-20px;
+	margin-top: -2px;
+	
 }
 
 a#newest-events {
 	background-color: #3a3434;
+	min-width:100%;
 }
 
 a#nearest-events {
@@ -740,6 +770,10 @@ div#events-list {
 div.events-list-item {
 	padding: 8px 30px;
 	border-top: 1px solid #313131;
+}
+
+div.event-picture {
+	overflow:hidden;
 }
 
 div.events-list-item img {
@@ -759,6 +793,7 @@ div.events-list-item img {
 	color: #fff;
 	text-transform: uppercase;
 	border: none;
+	text-indent:0px;
 }
 
 .yellow-link {

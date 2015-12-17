@@ -1,10 +1,10 @@
 <?php
+session_start();
 include_once('connection.php');
-
 if (isset($_SESSION['userID'])) {
     $user   = $_SESSION['userID'];
-    $action = $_POST['action'];
-	$pid=$_POST['pid'];
+$pid=$_POST['pid'];
+$action = $_POST['action'];
     if ($action == 'like') {
         $sql = $conn->prepare("SELECT * FROM likestbl  WHERE  uid=$user");
         $sql->execute();
@@ -14,6 +14,7 @@ if (isset($_SESSION['userID'])) {
             $sql->execute();
             $sql = $conn->prepare("UPDATE postcards SET numberOfLikes=numberOfLikes+1 WHERE ID=$pid");
             $sql->execute();
+echo 'Whatever first';
         } else {
             die("There is No Post With That ID");
         }
@@ -27,6 +28,7 @@ if (isset($_SESSION['userID'])) {
             $sql->execute();
             $sql = $conn->prepare("UPDATE postcards SET numberOfLikes=numberOfLikes-1 WHERE ID=$pid");
             $sql->execute();
+echo 'Whatever';
         }
     }
 }

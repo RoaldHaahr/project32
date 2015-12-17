@@ -1,22 +1,18 @@
 <?php
 	session_start();
 	if(isset($_SESSION['loggedOn'])) {
-		$nav = file_get_contents('navIn.php', true);
+		$nav = 'navIn.php';
 	} else {
-		$nav = file_get_contents('navOut.php', true);
+		$nav = 'navOut.php';
 	}
 ?>
 
-
-<?php echo '
-
-	<nav id="nav-out" class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
-			</div>
-			<div>' . $nav . '</div>
+<nav id="nav-out" class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="images/logowhite.png"></a>
 		</div>
-	</nav>';
+		<div><?php include_once($nav); ?></div>
+	</div>
+</nav>
 	
-?>

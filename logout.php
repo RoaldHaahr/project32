@@ -13,5 +13,5 @@
 	session_unset();
 	session_destroy();
 
-	header('Location: '. '/project32/goodbye.php' );
+	header('Location: '. 'goodbye.php' );
 ?>

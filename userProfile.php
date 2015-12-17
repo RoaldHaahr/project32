@@ -1,4 +1,4 @@
-<?php $page=userprofile; ?>
+<?php $page='userprofile'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 
@@ -41,7 +41,6 @@
 					<div class="col-md-12">
 						
 					</div>
-				</div>
 				</div>
 
 			</div>

@@ -1,4 +1,4 @@
-<?php $page=signup; ?>
+<?php $page='signup'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 
@@ -9,7 +9,7 @@
                 <div class="col-md-3"></div>
 
                 <div class="col-md-6">
-                    <form id="signup-form" role="form" method="post" enctype="multipart/form-data" action="signupCheck.php">
+                    <form id="signup-form" role="form" method="post" enctype="multipart/form-data" action="addUser.php">
                         <h2>Sign up</h2>
                         <p id="signup-email" class="form-group">
                             <input type="text" class="signup-field form-control" name="username" placeholder="Your email" autofocus>
@@ -18,7 +18,7 @@
                             <input type="password" class="signup-field form-control" name="password" placeholder="Your password">
                         </p>
                         <p>
-                            <input type="submit" class="signup-btn btn btn-default" value="SIGN UP">
+                            <input type="submit" class="link-button yellow-link" value="SIGN UP">
                         </p>
                         <p>
                             <a class="social-media-signup" id="fb-signup" href="#"><span>Sign up with Facebook</span></a>
