@@ -6,7 +6,7 @@ if (isset($_SESSION['userID'])) {
 $pid=$_POST['pid'];
 $action = $_POST['action'];
     if ($action == 'like') {
-        $sql = $conn->prepare("SELECT * FROM likestbl  WHERE  uid=$user");
+        $sql = $conn->prepare("SELECT * FROM likestbl  WHERE  uid=$user && pid=$pid");
         $sql->execute();
         $matches = $sql->rowCount();
         if ($matches == 0) {
