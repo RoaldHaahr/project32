@@ -51,6 +51,10 @@ a:hover {
 	text-decoration: none;
 }
 
+img {
+	max-width: 100%;
+}
+
 /**
 * Desktop
 *
@@ -144,6 +148,10 @@ a, .navbar-default .navbar-nav>li>a {
 .navbar a:link, .navbar a:visited  {
 	color: #fff;
 	text-decoration:none;
+}
+
+#nav-profile-picture img {
+	border-radius: 100%;
 }
 
 /* Front page nav */

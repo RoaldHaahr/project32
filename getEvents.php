@@ -1,7 +1,7 @@
 <?php
 	include_once('connection.php');
 
-	$sql = "SELECT ID, event_name_0, event_description, event_date, event_image_url, filetype, image FROM events ORDER BY event_date DESC";
+	$sql = "SELECT ID, event_name_0, event_description, event_date, event_location, event_image_url, filetype, image FROM events ORDER BY event_date DESC";
 
 	try {
 		$st = $conn->prepare($sql);
@@ -34,10 +34,10 @@
 						<img class="events-picture" src="' . $image . '" alt="">
 					</div>
 					<div class="col-md-4">
-						<h3 class="eventtitle">' . $name . '</h3>
+						<h3 class="eventtitle"><a href="event.php?ID=' . $row['ID'] . '">' . $name . '</a></h3>
 						<p>
 							<time>' . date('H i', $date) .'</time>
-							<span class="event-location"></span>
+							<span class="event-location">' . $row['event_location'] . '</span>
 							<p class="event-description">' . $description . '</p>
 						</p>
 					</div>

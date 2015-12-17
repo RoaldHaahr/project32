@@ -2,29 +2,49 @@
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 
+<?php include_once('connection.php'); ?>
+
+<?php $sql = "SELECT ID, event_name_0, event_description, event_date, event_image_url, event_location, filetype, image FROM events WHERE " . $_GET['ID'] . " = ID";
+
+	try {
+		$st = $conn->prepare($sql);
+		$st->execute();
+		$row = $st->fetch();
+	} catch (PDOException $e) {
+		echo "Server error - try again! " . $e->getMessage();
+	}
+
+	if(empty($row['event_image_url'])) {
+		$image = 'showEventImage.php?ID=' . $row['ID'];
+	} else {
+		$image = $row['event_image_url'];
+	}
+
+
+?>
 	<section class="page" id="event-page">
 		
 			<div class="container-fluid">
 				
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title">Christmas in Aarhus</h2>
+						<h2 class="page-title"><?php echo $row['event_name_0']; ?></h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-4">
 						<figure class="event-picture">
-							<img src="images/event-picture.png">
+							<img src="<?php echo $image; ?>">
 						</figure>
 					</div>
 
 					<div class="col-md-4">
 						<div class="event-info">
-							<time class="event-time">Tuesday, December 22, 2015</time><br>
-							<span class="event-place">Aarhus C</span>
+							<time class="event-time"><?php echo date('M d Y', $row['event_date']); ?></time><br>
+							<span class="event-place"><?php echo $row['event_location']; ?></span>
 							<p id="event-text">
-								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								<?php echo $row['event_description']; ?>
 							</p>
 						</div>
 					</div>
