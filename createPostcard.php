@@ -13,6 +13,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-5">
+							<input type="text" name="title" id="postcard-title" placeholder="Postcard title">
 							<div id="postcard-image">
 								<img src="images/xbox.png">
 							</div>
@@ -23,10 +24,10 @@
 							<div id="pre-image">
 								<h3>Choose one from our photos</h3>
 								<p>
-									<img src="../images/">
-									<img src="../images/">
-									<img src="../images/">
-									<img src="../images/">
+									<img src="../images/1.png">
+									<img src="../images/2.png">
+									<img src="../images/3.png">
+									<img src="../images/4.png">
 									<img src="../images/">
 									<img src="../images/">
 								</p>
@@ -37,6 +38,10 @@
                                 <p id="user-picture-text"> Choose from your picture </p>
 									<input type="file" name="postcard-picture" id="user-picture-upload">
 								</div>
+							</div>
+							<div id="privacy">
+								<input type="radio" name="privacy" value="1">Public or
+								<input type="radio" name="privacy" value="2">Private
 							</div>
 							<p>
 								<input type="submit" class="link-button yellow-link">

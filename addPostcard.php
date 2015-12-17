@@ -10,10 +10,6 @@
 	if(!empty($_SESSION['userID'])) {
 		if($_SESSION['role'] == 'traveler') {
 
-			echo $_SESSION['loggedOn'] . $_SESSION['role'];
-
-
-
 			$sql = "INSERT INTO postcards (userID, date, location, content, tags, type, title, picture, filetype)
 			VALUES (:userID, :date, :location, :content, :tags, :type, :title,'" . $image . "','" . $imageProperties['mime'] . "')";
 
