@@ -23,6 +23,8 @@
 		echo "- Update profile";
 		else if($page == 'createevent')
 		echo "- Create a new event";
+		else if($page == 'createpostcard')
+		echo "- Create a new postcard";
 		 ?></title>
          
          <meta name="description" content="<?php if($page=='homepage')

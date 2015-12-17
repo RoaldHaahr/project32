@@ -34,6 +34,8 @@
 		echo "You shall not pass!";
 	}
 
+	header('Location: ' . 'postcards.php');
+
 	$conn = null;
 	
 
