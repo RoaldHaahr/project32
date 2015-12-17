@@ -17,7 +17,11 @@
 		$name = $row['event_name_0'];
 		$date = $row['event_date'];
 		$description = $row['event_description'];
-		$image = (empty($row['event_image_url'] ? 'showEventImage.php?ID=' . $row['ID'] : $row['event_image_url']));
+		if(empty($row['event_image_url'])) {
+			$image = 'showEventImage.php?ID=' . $row['ID'];
+		} else {
+			$image = $row['event_image_url'];
+		}
 
 		if(strtotime(date('d F Y', strtotime('01 November 2015'))) < $date ) {
 
