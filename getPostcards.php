@@ -42,7 +42,8 @@ $uid=$_SESSION['userID'];
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">'.$row['location'].'</span>
+						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<div class="share"></div>
 						<p class="like" id="'.$pid.'" title="Unlike">Unlike</p>
 					</li>';
 				
@@ -60,7 +61,8 @@ $uid=$_SESSION['userID'];
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">'.$row['location'].'</span>
+						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<div class="share"></div>
 						<p class="like" id="'.$pid.'" title="Like">Like</p>
 					</li>';
 		}
@@ -83,7 +85,8 @@ $uid=$_SESSION['userID'];
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">Send by: '.$row['location'].'</span>>
+						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<div class="share"></div>
 						</figure>
 					</li>';
 	}
@@ -94,7 +97,15 @@ $uid=$_SESSION['userID'];
 
 ?>
 
-<script> 
+
+ <script src="js/jssocials-1.0.0/jquery.js"></script>
+    <script src="js/jssocials-1.0.0/jssocials.min.js"></script>
+    <script>
+        $(".share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "pinterest"]
+        });
+
+
 var that;
 $(document).ready(function(){
  $('.like').click(function(){
