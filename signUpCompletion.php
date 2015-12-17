@@ -69,24 +69,24 @@
                         <p>Name: </p>
                     </div>
                     <div class="col-md-11">
-                        <input type="text" name="name" value="<? echo $row['name']; ?>" >
+                        <input type="text" name="name" value="<?php echo $row['name']; ?>" >
                     </div>
                 </div>
 				<div class="row">
 					<div class="col-md-6">
 						<p class="role-radio" id="tourist-radio">
-							<input type="radio" name="role" value="Tourist" <? echo $tourist; ?>>I'm a tourist
+							<input type="radio" name="role" value="Tourist" <?php echo $tourist; ?>>I'm a tourist
 						</p>
 					</div>
 					<div class="col-md-6">
 						<p class="role-radio" id="local-radio">
-							<input type="radio" name="role" value="Local" <? echo $local; ?>>I'm a local
+							<input type="radio" name="role" value="Local" <?php echo $local; ?>>I'm a local
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<? echo $row['ID']; ?>" alt="Profile picture"></figure>
+						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<?php echo $row['ID']; ?>" alt="Profile picture"></figure>
 
 					</div>
 					<div class="col-md-4">
