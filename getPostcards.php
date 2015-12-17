@@ -1,8 +1,7 @@
 <?php
-error_reporting(E_ALL); ini_set('display_errors', 1);
 	include_once('connection.php');
 
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type=1";
+	$sql = "SELECT ID, userID, location, content, title, picture, filetype, tags FROM postcards WHERE type=1";
 
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -32,17 +31,15 @@ $uid=$_SESSION['userID'];
 		$liked= true;
 					$postcards .= '<li>
 						<figure>
-							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['location'].'">
+							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['tags'].'">
 							<figcaption>
 							<p>'.$row['content'].' </p>
-								<span>' . $row['ID'] . '</span>
-							<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
 
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<span class="postcard-tags">Tags: '.$row['tags'].'</span>
 						<div class="share"></div>
 						<p class="like" id="'.$pid.'" title="Unlike">Unlike</p>
 					</li>';
@@ -52,16 +49,14 @@ $uid=$_SESSION['userID'];
 		if($liked== false){
 			$postcards .= '<li>
 						<figure>
-							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['location'].'">
+							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['tags'].'">
 							<figcaption>
 							<p>'.$row['content'].' </p>
-								<span>' . $row['ID'] . '</span>
-								<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<span class="postcard-tags">Tags: '.$row['tags'].'</span>
 						<div class="share"></div>
 						<p class="like" id="'.$pid.'" title="Like">Like</p>
 					</li>';
@@ -70,6 +65,7 @@ $uid=$_SESSION['userID'];
 	}
 	else{
 		foreach($rows as $row) {
+		$username = $row['name'];
 		$title = $row['title'];
 		$location = $row['location'];
 		$description = $row['content'];
@@ -79,8 +75,6 @@ $uid=$_SESSION['userID'];
 							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['location'].'">
 							<figcaption>
 							<p>'.$row['content'].' </p>
-								<span>' . $row['ID'] . '</span>
-								<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
