@@ -1,11 +1,23 @@
 <?php $page = 'completeprofile'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
-<?php include_once 'getUserProfile.php'; ?>
 
 	<section class="page" id="signup-completion-page">
 		
 		<?php
+			include_once('connection.php');
+
+			session_start();
+
+			$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
+
+			try {
+				$st = $conn->prepare($sql);
+				$st->execute();
+				$row = $st->fetch();
+			} catch (PDOException $e) {
+				echo "Server error - try again!<br>" . $e->getMessage();
+
             $name = $row['name'];
             $tourist = "";
             $local = "";
