@@ -99,6 +99,7 @@ $(document).ready(function(){
      that.text('Like');
      that.attr('title','Like');
     });
+	
    }
   }
  });
