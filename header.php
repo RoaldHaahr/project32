@@ -19,6 +19,8 @@
 		echo "- Log in";
 		else if($page=='signup')
 		echo "- Join us";
+		else if($page == 'completeprofile')
+		echo "- Update profile";
 		else if($page == 'createevent')
 		echo "- Create a new event";
 		 ?></title>
