@@ -13,7 +13,7 @@
 	foreach($rows as $row) {
 		$title = $row['title'];
 		$location = $row['location'];
-		$userID = 	$row['userID'];
+		$userID = $row['userID'];
 		$description = $row['content'];
 		$postcards .= '<figure class="postcardbox">
 							<img src="showImage.php?ID=' . $row['ID'] . '" alt="event-picture" class="postcard-picture">

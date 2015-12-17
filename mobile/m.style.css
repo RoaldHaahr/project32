@@ -7,6 +7,7 @@ html, body{
 			font-family: 'Source Sans Pro', sans-serif;
 			font-size: 12pt !important;
 			color: #000;
+			background-color: #eee;
 			
 		}
 
@@ -36,7 +37,7 @@ html, body{
 
 	a{
 		font-weight: 300;
-		color: #fff;
+		color: #000;
 		text-decoration: none;
 	}
 
@@ -50,7 +51,7 @@ html, body{
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 60px;
-		margin-bottom: 65px;
+		margin-bottom: 70px;
 	}
 
 	.container2{
@@ -58,23 +59,36 @@ html, body{
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 10px;
-		margin-bottom: 65px;
+		margin-top: 60px;
+		margin-bottom: 5px;
+	}
+	#search{
+		background-color: #fff;
+		color: #000;
+		}
+	
+/* PROFILE */
+
+	#red{
+		background-color: #e23f3f;
+		padding-top: 15px;
+		padding-bottom: 5px;
 	}
 
-
-	#completeProfile{
-		color: #000;
+	.profilePicture{
+		width: 120px;
+		height: 120px;
+		border: 10px solid #E66468;
+		border-radius: 50%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	#signup-profile-picture{
 		width: 100%;
 	}
 
-	#red{
-		background-color: #e23f3f;
-		padding-top: 15px;
-	}
+/* LOGIN / SIGN UP */
 
 	#icon-welcome{
 		width: 30%;
@@ -88,15 +102,48 @@ html, body{
 		width: 75%;
 	}
 
-	#search{
-		background-color: #fff;
-		color: #000;
+	p#login-email input, p#signup-mail input{
+		background-image: url('img/mail-icon.png');
+		background-position: 6px 10px;
+		background-size: 35px 25px;
+		background-repeat: no-repeat;
+		padding-left: 50px;
 	}
 
-	.profilePicture{
-		width: 150px;
-		border: 5px solid #E66468;
-		border-radius: 50%;
+	p#login-password input, p#signup-password input{
+		background-image: url('img/lock-icon.png');
+		background-position: 6px 10px;
+		background-size: 35px 25px;
+		background-repeat: no-repeat;
+		padding-left: 50px;
+	}
+
+	a#fb-login, a#fb-signup {
+	background: url('img/facebook-icon-white.png');
+	background-repeat: no-repeat;
+	background-size: 23px 23px;
+	background-position: 6px 5px;
+	background-color: #395086;
+	font-weight: 600;
+	color: #fff;
+	width: 100%;
+	margin: 0px;
+	bottom: 35px;
+	position: absolute;
+	}
+
+	a#t-login, a#t-signup {
+	background: url('img/twitter-icon-white.png');
+	background-repeat: no-repeat;
+	background-size: 23px 23px;
+	background-position: 6px 5px;
+	background-color: #3286c2;
+	font-weight: 600;
+	color: #fff;
+	width: 100%;
+	margin: 0px;
+	position: absolute;
+	bottom: 0px;
 	}
 
 /* EVENT */
@@ -168,6 +215,7 @@ html, body{
 	input[type=submit]{
 		background-color: #ffa200;
 		color: #fff;
+		font-size: 18px;
 		width: 100%;
 		border-radius: 3px;
 		border: 0px solid;
@@ -201,6 +249,10 @@ html, body{
 		color: #000;
 		text-align: center;
 
+	}
+
+	#contact-form{
+		padding-top: 20px;
 	}
 
 /* HEADER */
@@ -253,11 +305,17 @@ html, body{
 
 	footer a{
 		font-size: 12px;
+		color: #fff;
 	}
 
 	a:active{
 		text-decoration: none;
 		color: #fff;
+	}
+
+	a:hover{
+		color: #fff;
+		text-decoration: none;
 	}
 
 
@@ -318,23 +376,4 @@ html, body{
 		background-color:#ffa200;
 		margin-top: 85px;
 		font-weight: 600;
-	}
-
-	#faceBtn{
-		background-color: #395086;
-		font-weight: 600;
-		width: 100%;
-		margin: 0px;
-		bottom: 35px;
-		position: absolute;
-
-	}
-
-	#twitBtn{
-		background-color: #3286c2;
-		font-weight: 600;
-		width: 100%;
-		margin: 0px;
-		position: absolute;
-		bottom: 0px;
 	}

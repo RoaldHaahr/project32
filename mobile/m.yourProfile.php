@@ -33,7 +33,7 @@
 
 		<div id="red">
 			
-			<div class="container">
+			<div class="container2">
 				
 				<?php
 					echo $profilePicture;
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 
-		<div class="container2">
+		<div class="container">
 			
 			<?php
 				echo '<p>Email: '.$row["email"].'</p>';

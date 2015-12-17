@@ -3,11 +3,10 @@
 
 	$id = NULL;
 
-	$sql = "INSERT INTO users (name, email, password)
-			VALUES (:name, :email, :password);";
+	$sql = "INSERT INTO users (email, password)
+			VALUES (:email, :password);";
 	try {
 		$st = $conn->prepare($sql);
-		$st->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
 		$st->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
 		$st->bindValue(':password', md5($_POST['password']), PDO::PARAM_STR);
 		$st->execute();

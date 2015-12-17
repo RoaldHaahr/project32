@@ -1,16 +1,8 @@
 <?php include 'connection.php'; ?>
 <!DOCTYPE html>
 <html>
+	<?php include 'm.head.php'; ?>
 	<head>
-
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-
-		<link rel="stylesheet" href="bootstrap.min.css" />
-		<link rel="stylesheet" href="m.style.css" />
-
 		<style>
 			html, body{
 				background-image: url(img/login.png);
@@ -33,18 +25,23 @@
 				<h1>Sign up</h1>
 			
 			<form action="addUser.php" method="post">
-				<input type="name" name="name" placeholder="Your name" required /> 
-				<input type="email" name="email" placeholder="Your email" required /> 
-				<input type="password" name="password" placeholder="Your password" required />
+				
+				<p id="signup-mail">
+					<input type="email" name="email" placeholder="Your email" required /> 
+				</p>
+
+				<p id="signup-password">
+					<input type="password" name="password" placeholder="Your password" required />
+				</p>
 
 				<input type="submit" name="submit" value="SIGN UP" />
 			</form>
 
 		</div>
 
-		<a href="" class="Btn" id="faceBtn"><img src="" alt=""> SIGN UP WITH FACEBOOK</a>
+		<a href="" class="Btn" id="fb-login">SIGN UP WITH FACEBOOK</a>
 			
-		<a href="" class="Btn" id="twitBtn"><img src="" alt="">SIGN UP WITH TWITTER</a>
+		<a href="" class="Btn" id="t-login">SIGN UP WITH TWITTER</a>
 			
 	</body>
 

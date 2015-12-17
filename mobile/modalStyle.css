@@ -1,8 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300,400italic);
 
 
 .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -28,11 +29,11 @@
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 3px;
-	background: #fff;
+	background: #eee;
 }
 
 .close {
-	background: #eee;
+	background: #ccc;
 	color: #000;
 	position: absolute;
 	right: 10px;
@@ -46,6 +47,9 @@
 	border-radius: 3px;
 }
 
-.close:hover { background: #ccc; }
+.close:active { 
+	background: #ccc;
+	color: #e23f3f;
+}
 
 }

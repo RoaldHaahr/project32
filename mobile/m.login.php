@@ -1,16 +1,8 @@
 <?php include 'connection.php'; ?>
 <!DOCTYPE html>
 <html>
+	<?php include 'm.head.php'; ?>
 	<head>
-
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-
-		<link rel="stylesheet" href="bootstrap.min.css" />
-		<link rel="stylesheet" href="m.style.css" />
-
 		<style>
 			html, body{
 				background-image: url(img/login.png);
@@ -33,15 +25,13 @@
 				<h1>Log In</h1>
 			
 			<form action="loginCheck.php" method="post" enctype="multipart/form-data">
-				<p>
-					<lable>
-						<input type="text" name="username" placeholder="Your name" required />
-					</lable>
+				
+				<p id="login-email">
+					<input type="email" name="email" placeholder="Your email" required />
 				</p>
-				<p>
-					<lable>
-						<input type="password" name="password" placeholder="Your password" required />
-					</lable>
+				
+				<p id="login-password">
+					<input type="password" name="password" placeholder="Your password" required />
 				</p>
 
 				<input type="submit" name="submit" value="LOG IN" />
@@ -49,9 +39,9 @@
 
 		</div>
 
-		<a href="" class="Btn" id="faceBtn"><img src="" alt=""> LOG IN WITH FACEBOOK</a>
+		<a href="" class="Btn" id="fb-login">LOG IN WITH FACEBOOK</a>
 			
-		<a href="" class="Btn" id="twitBtn"><img src="" alt="">LOG IN WITH TWITTER</a>
+		<a href="" class="Btn" id="t-login"><img src="" alt="">LOG IN WITH TWITTER</a>
 			
 	</body>
 

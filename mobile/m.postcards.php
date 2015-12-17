@@ -46,8 +46,14 @@
 				</div>
 			</div>
 
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="m.addPostcard.php" class="orangeBtn">Add Postcard</a>
+				</div>
+			</div>
+
 			
-				<?php include 'getPostcards.php'; ?>
+			<?php include 'getPostcards.php'; ?>
 			
 
 		</div>

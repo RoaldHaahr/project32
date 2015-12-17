@@ -1,7 +1,7 @@
 <?php
 	include_once 'connection.php';
 
-	$sql = "SELECT ID, event_name_0, event_description, event_date, event_image_url, filetype, image FROM events WHERE " . $_GET['ID'] . " = ID";
+	$sql = "SELECT ID, event_name_0, event_description, event_date, event_location, event_image_url, filetype, image FROM events WHERE " . $_GET['ID'] . " = ID";
 	try {
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -14,10 +14,10 @@
 	foreach($rows as $row) {
 		$name = $row['event_name_0'];
 		$date = $row['event_date'];
+		$location = $row['event_location'];
 		$description = $row['event_description'];
 		$image = $row['event_image_url'];
 		
-		if(strtotime(date('d F Y', strtotime('01 November 2015'))) < $date ) {
 		
 			$events .= '
                 <div class="eventbox">
@@ -29,7 +29,7 @@
                         <div class="col-xs-8" style="padding-left: 0px;">
                             <h2>' . $name . '</h2>
                             <p class="event-text"><img src="img/clock-icon.png" alt="" class="event-icon">' . date('M, d, Y', $date) . ' ' . date('H i', $date) . '</p>
-                            <p class="event-text"><img src="img/map-icon.png" alt="" class="event-icon"> Place here Place here Place here</p>
+                            <p class="event-text"><img src="img/map-icon.png" alt="" class="event-icon">' . $location . '</p>
                         </div>   
                     </div>
                 </div>
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 				</div>';
-		}
+		
 	}
 	echo $events;
 	

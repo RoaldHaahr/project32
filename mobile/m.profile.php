@@ -1,26 +1,7 @@
 <?php include 'getProfile.php'; ?>
 <!DOCTYPE html>
 <html>
-	
-	<head>
-
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-
-		<link rel="stylesheet" href="bootstrap.min.css" />
-		<link rel="stylesheet" href="m.style.css" />
-		<link rel="stylesheet" href="modalStyle.css" />
-		
-
-		<style>
-			html, body{
-				background-color: #eee;
-	        }
-		</style>
-
-	</head>
+	<?php include 'm.head.php'; ?>
 
 	<body>
 		
@@ -33,25 +14,41 @@
 
 		<div id="red">
 			
-			<div class="container">
-				
+			<div class="container2">
+
 				<?php
 					echo $profilePicture;
-					echo '<h1 class="white">'.$row["name"].'</h1>';
-					echo '<p class="white small">- '.$row["role"].' -</p>';
-					echo '<p class="white">'.$row["description"].'</p>';
+					echo '<h1 class="white">' . $row["name"] . '</h1>';
+					echo '<p class="white small">- ' . $row["role"] . ' -</p>';
+					echo '<p class="white">' . $row["description"] . '</p>';
 				?>
 
 				<div class="row">
 					<div class="col-xs-12">
-						<a class="orangeBtn" href="#openModal">CONTACT</a>
+						<a class="orangeBtn" href="#contactModal">CONTACT</a>
 					</div>
 				</div>
 				
 			</div>
 		</div>
 
-		<div class="container2">
+		<div id="contactModal" class="modalDialog">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+					
+					<form id="contact-form" action="handleMail.php" method="post">
+						<?php 
+							echo '<h3>Get in touch with ' . $row["name"] . '</h3>';
+						?>
+						<div><input type="text" name="subject" placeholder="Subject"></div>
+						<div><textarea name="message" placeholder="Your message"></textarea></div>
+						<input type="submit" class="link-button red-link" value="Contact">
+					</form>
+
+			</div>
+		</div>
+
+		<div class="container">
 			
 			<?php
 				echo '<p>Email: '.$row["email"].'</p>';
@@ -65,25 +62,7 @@
 		</div>
 
 
-<div id="openModal" class="modalDialog">
-		<div>
-			<a href="#close" title="Close" class="close">X</a>
-			
-			<div class="col-md-4">
-				
-				<form id="contact-form" action="handleMail.php" method="post">
-					<?php 
-					echo '<h3>Get in touch with '.$row["name"].'</h3>';
-					?>
-					<div><input type="text" name="subject" placeholder="Subject"></div>
-					<div><textarea name="message" placeholder="Your message"></textarea></div>
-					<input type="submit" class="link-button red-link" value="Contact">
-				</form>
-						
-			</div>
 
-		</div>
-	</div>
 
 	 <footer>
     	<div class="row">
