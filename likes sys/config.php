@@ -1,1 +1,0 @@
-<? $dbh = new PDO('mysql:dbname=theodora_like;host=localhost', 'theodora_like', 'likelike'); ?>
