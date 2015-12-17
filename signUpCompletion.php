@@ -1,6 +1,7 @@
 
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
+<?php include_once 'getUserProfile.php'; ?>
 
 	<section class="page" id="signup-completion-page">
 		
@@ -24,10 +25,10 @@
 					</div>
 				</div>
 				 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-1">
                         <p>Name: </p>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-11">
                         <input type="text" name="name" value="<? echo $row['name']; ?>" >
                     </div>
                 </div>
