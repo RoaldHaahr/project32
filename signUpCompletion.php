@@ -34,31 +34,14 @@
 
 						</label>
 
-<<<<<<< Updated upstream
 						<div id="user-picture-btn"><p id="choose-picture"><font color="white"> Choose picture</font><input id="user-picture-upload" type="file" name="image" value="Choose picture"></p></div>
 
-=======
-
-						<div id="user-picture-btn">
-                        	<p id="choose-picture">
-                        		<font color="white"> Choose picture</font><input id="user-picture-upload" type="file" name="user-picture" value="Choose picture"></p>
-                       </div>
-
-				
-                        <input id="user-picture-upload" type="file" name="image" value="Choose picture" >
-
->>>>>>> Stashed changes
 					</div>
 
 					<div class="col-md-5">
 						<div id="nationality-and-description">
 							<select name="user-nationality">
 
-<<<<<<< Updated upstream
-=======
-								<option selected disabled placeholder="Your nationality" ><li id="nationality">Your nationality </li></option>
-
->>>>>>> Stashed changes
 								<option selected disabled>Your nationality</option>
 								<?php include_once('getCountries.php'); ?>
 
