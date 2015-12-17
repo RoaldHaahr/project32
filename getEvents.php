@@ -27,16 +27,18 @@
 
 			$events .= '
 				<div class="row events-list-item">
-					<div class="col-md-4">
+					<div class="col-md-4" id="event-date">
 						<time>' . date('M d, Y', $date) . '</time>
+						<br>
+						<time>' . date('H i', $date) .'</time>
 					</div>
 					<div class="col-md-4 event-picture">
 						<img class="events-picture" src="' . $image . '" alt="">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" id="event-details">
 						<h3 class="eventtitle"><a href="event.php?ID=' . $row['ID'] . '">' . $name . '</a></h3>
 						<p>
-							<time>' . date('H i', $date) .'</time>
+							
 							<span class="event-location">' . $row['event_location'] . '</span>
 							<p class="event-description">' . $description . '</p>
 						</p>

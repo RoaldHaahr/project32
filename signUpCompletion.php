@@ -37,11 +37,9 @@
 					</div>
 				</div>
 				 <div class="row">
-                    <div class="col-md-1">
-                        <p>Name: </p>
-                    </div>
-                    <div class="col-md-11">
-                        <input type="text" name="name" value="<? echo $row['name']; ?>" >
+                   
+                    <div class="col-md-11" id="name">
+                        <input id="name-input" type="text" name="name" placeholder="name" value="<? echo $row['name']; ?>" >
                     </div>
                 </div>
 				<div class="row">
@@ -74,7 +72,7 @@
 
 					<div class="col-md-5">
 						<div id="nationality-and-description">
-							<select name="user-nationality">
+							<select name="user-nationality" id="select-nationality">
 
 								<option selected disabled>Your nationality</option>
 								<?php include_once('getCountries.php'); 

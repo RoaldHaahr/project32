@@ -469,6 +469,19 @@ form#signup-completion-form input[type=submit] {
 	color:white;
 }
 
+#name{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-left: 120px;
+	
+}
+#name-input {
+	text-indent:0px;
+	outline:none;
+}
+#select-nationality {
+	text-indent:30px;
+}
 /**
 * My Profile
 *
@@ -840,7 +853,23 @@ div.events-list-item img {
 	width: 100%;
 	height: auto;
 }
-
+.eventtitle a {
+	color: black;
+	font-size: 1.2em;
+	font-weight:500;
+}
+time {
+	font-size: 3em;
+	font-weight:600;
+	
+}
+#event-date {
+	text-align:center;
+}
+#event-details{
+	text-align:center;
+	
+}
 /*******/
 
 .link-button {
