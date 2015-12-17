@@ -4,30 +4,35 @@
 <?php
 	include_once('connection.php');
 
-	session_start();
-
-	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
-
-	try {
-		$st = $conn->prepare($sql);
-		$st->execute();
-		$row = $st->fetch();
-	} catch (PDOException $e) {
-		echo "Server error - try again!<br>" . $e->getMessage();
-
-    $name = $row['name'];
-    $tourist = "";
-    $local = "";
-
-    if($row["role"] == 'tourist'){
-        $tourist = 'checked = "checked"';
-    } else{
-        $local = 'checked = "checked"';
-    }
 ?>
-
 	<section class="page" id="signup-completion-page">
 		
+		<?php
+			include_once('connection.php');
+
+			session_start();
+
+			$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
+
+			try {
+				$st = $conn->prepare($sql);
+				$st->execute();
+				$row = $st->fetch();
+			} catch (PDOException $e) {
+				echo "Server error - try again!<br>" . $e->getMessage();
+			}
+
+            $name = $row['name'];
+            $tourist = "";
+            $local = "";
+
+            if($row["role"] == 'tourist'){
+                $tourist = 'checked = "checked"';
+            } else{
+                $local = 'checked = "checked"';
+            }
+        ?>
+
 		<form id="signup-completion-form" action="updateUser.php" method="post" enctype="multipart/form-data">
 			<div class="container-fluid">
 				
@@ -37,26 +42,34 @@
 					</div>
 				</div>
 				 <div class="row">
+<<<<<<< HEAD
                    
                     <div class="col-md-11" id="name">
                         <input id="name-input" type="text" name="name" placeholder="name" value="<? echo $row['name']; ?>" >
+=======
+                    <div class="col-md-1">
+                        <p>Name: </p>
+                    </div>
+                    <div class="col-md-11">
+                        <input type="text" name="name" value="<?php echo $row['name']; ?>" >
+>>>>>>> origin/master
                     </div>
                 </div>
 				<div class="row">
 					<div class="col-md-6">
 						<p class="role-radio" id="tourist-radio">
-							<input type="radio" name="role" value="Tourist" <? echo $tourist; ?>>I'm a tourist
+							<input type="radio" name="role" value="Tourist" <?php echo $tourist; ?>>I'm a tourist
 						</p>
 					</div>
 					<div class="col-md-6">
 						<p class="role-radio" id="local-radio">
-							<input type="radio" name="role" value="Local" <? echo $local; ?>>I'm a local
+							<input type="radio" name="role" value="Local" <?php echo $local; ?>>I'm a local
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<? echo $row['ID']; ?>" alt="Profile picture"></figure>
+						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<?php echo $row['ID']; ?>" alt="Profile picture"></figure>
 
 					</div>
 					<div class="col-md-4">
