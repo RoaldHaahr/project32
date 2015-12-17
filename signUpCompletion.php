@@ -42,17 +42,8 @@
 					</div>
 				</div>
 				 <div class="row">
-<<<<<<< HEAD
-                   
                     <div class="col-md-11" id="name">
                         <input id="name-input" type="text" name="name" placeholder="name" value="<? echo $row['name']; ?>" >
-=======
-                    <div class="col-md-1">
-                        <p>Name: </p>
-                    </div>
-                    <div class="col-md-11">
-                        <input type="text" name="name" value="<?php echo $row['name']; ?>" >
->>>>>>> origin/master
                     </div>
                 </div>
 				<div class="row">
