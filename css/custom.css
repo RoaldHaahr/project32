@@ -243,6 +243,12 @@ section#home .col-md-2 a:hover {
 section#home .col-md-2 span {
 	margin-top: 37vh;
 }
+.second {
+	display:none;
+}
+.third {
+	display:none;
+}
 
 /**
 * Sign up and Login
@@ -481,6 +487,15 @@ form#signup-completion-form input[type=submit] {
 }
 #select-nationality {
 	text-indent:30px;
+	outline:none;
+	font-size:1.3em;
+	font-weight:100;
+}
+#description {
+	outline:none;
+	font-size:1.3em;
+	font-weight:100;
+	line-height: 160%;
 }
 /**
 * My Profile

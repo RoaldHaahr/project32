@@ -84,7 +84,7 @@
 								?>
 
 							</select><br>
-							<textarea name="user-description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
+							<textarea id="description" name="user-description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
 						</div>
 					</div>
 				</div>
