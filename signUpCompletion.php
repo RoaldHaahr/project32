@@ -1,9 +1,34 @@
 <?php $page = 'completeprofile'; ?>
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
+<?php
+	include_once('connection.php');
+
+	session_start();
+
+	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
+
+	try {
+		$st = $conn->prepare($sql);
+		$st->execute();
+		$row = $st->fetch();
+	} catch (PDOException $e) {
+		echo "Server error - try again!<br>" . $e->getMessage();
+
+    $name = $row['name'];
+    $tourist = "";
+    $local = "";
+
+    if($row["role"] == 'tourist'){
+        $tourist = 'checked = "checked"';
+    } else{
+        $local = 'checked = "checked"';
+    }
+?>
 
 	<section class="page" id="signup-completion-page">
 		
+<<<<<<< HEAD
 		<?php
 			include_once('connection.php');
 
@@ -29,6 +54,8 @@
                 $local = 'checked = "checked"';
             }
         ?>
+=======
+>>>>>>> origin/master
 		<form id="signup-completion-form" action="updateUser.php" method="post" enctype="multipart/form-data">
 			<div class="container-fluid">
 				
