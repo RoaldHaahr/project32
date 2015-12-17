@@ -9,7 +9,7 @@
 
 	session_start();
 
-	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'] . ";";
+	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'];
 
 	try {
 		$st = $conn->prepare($sql);
@@ -18,6 +18,8 @@
 	} catch (PDOException $e) {
 		echo "Server error - try again!<br>" . $e->getMessage();
 	}
+
+	$profilePicture = '<img src="showProfilePicture.php?ID=' . $_SESSION['userID'] . '" class="profile-picture">';
 ?>
 
 	<section class="page" id="loggedin-user-profile-page">
@@ -31,9 +33,9 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<figure class="profile-picture">
-							<img src="showProfilePicture.php?ID=<?php echo $row['ID']; ?>">
-						</figure>
+						<?php
+							echo $profilePicture;
+						?>
 					</div>
 				</div>
 				<div class="row">
