@@ -36,6 +36,8 @@ $uid=$_SESSION['userID'];
 							<figcaption>
 							<p>'.$row['content'].' </p>
 								<span>' . $row['ID'] . '</span>
+							<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
@@ -53,6 +55,7 @@ $uid=$_SESSION['userID'];
 							<figcaption>
 							<p>'.$row['content'].' </p>
 								<span>' . $row['ID'] . '</span>
+								<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
@@ -75,6 +78,7 @@ $uid=$_SESSION['userID'];
 							<figcaption>
 							<p>'.$row['content'].' </p>
 								<span>' . $row['ID'] . '</span>
+								<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
 							</figcaption>
 						</figure>
 						<h3>' . $title . '</h3>
@@ -89,8 +93,6 @@ $uid=$_SESSION['userID'];
 	$conn = null;
 
 ?>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <script> 
 var that;
