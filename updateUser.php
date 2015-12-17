@@ -30,7 +30,7 @@
 
 	$conn = null;
 	
-	header('Location: ' . 'm.yourProfile.php');
+	header('Location: ' . 'myProfile.php');
 
 
 ?>
