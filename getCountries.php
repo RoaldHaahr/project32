@@ -13,8 +13,8 @@
 
 	$countries = "";
 
-	foreach($rows as $row) {
-		$countries .= '<option value="' . $row['country'] . '">' . $row['country'] . '</option>';
+	foreach($rows as $countryrow) {
+		$countries .= '<option value="' . $countryrow['country'] . '">' . $countryrow['country'] . '</option>';
 	}
 
 	echo $countries;
