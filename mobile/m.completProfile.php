@@ -44,11 +44,12 @@
 
             <div id="completProfile">
             	<?php
-                $traveler = "";
+                $name = $row['name'];
+                $tourist = "";
                 $local = "";
 
-                if($row["role"] == 'traveler'){
-                    $traveler = 'checked = "checked"';
+                if($row["role"] == 'tourist'){
+                    $tourist = 'checked = "checked"';
                 } else{
                     $local = 'checked = "checked"';
                 }
@@ -56,9 +57,18 @@
                 <form method="post" enctype="multipart/form-data" action="updateUser.php">
                 	
                     <div class="row">
+                        <div class="col-xs-2">
+                            <p>Name: </p>
+                        </div>
+                        <div class="col-xs-10">
+                            <input type="text" name="name" value="<? echo $row['name']; ?>" >
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-xs-6">
                             <p class="checkboxText">
-                                <input type="checkbox" name="role" value="traveler" id="checkbox1" <? echo $traveler; ?>>I'm a traveler
+                                <input type="checkbox" name="role" value="tourist" id="checkbox1" <? echo $tourist; ?>>I'm a tourist
                             </p>
                         </div>
 
