@@ -1,12 +1,14 @@
 <?php
 	include_once('connection.php');
 
+$password=md5($_POST['password']);
+
 	$sql = "SELECT count(*) as success, id, role FROM users WHERE name=:username AND password=:password";
 
 	try {
 		$st = $conn->prepare($sql);
 		$st->bindValue(":username", $_POST["username"], PDO::PARAM_STR);
-		$st->bindValue(":password", $_POST["password"], PDO::PARAM_STR);
+		$st->bindValue(":password", $password, PDO::PARAM_STR);
 		$st->execute();
 		$row=$st->fetch();          
 	} catch (PDOException $e) {
