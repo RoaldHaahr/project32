@@ -235,9 +235,10 @@ ul.navbar-nav li a.box-btn {
 ul.navbar-nav a#nav-profile-picture img {
 	position: relative;
 	top: -14px;
-	width: 56px;
+	width: 50px;
 	height: auto;
 }
+
 /**
 * Icons
 *
