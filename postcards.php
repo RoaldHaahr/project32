@@ -1,6 +1,5 @@
 <?php $page='postcards'; ?>
 <?php include_once('header.php'); ?>
-	<body>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script>
@@ -15,7 +14,7 @@
 				<?php require('getPostcards.php'); ?>
 				
 				
-		</div><!-- /container -->
+		</section><!-- /container -->
 		<script src="js/toucheffects.js"></script>
 	</body>
 </html>

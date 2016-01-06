@@ -10,7 +10,7 @@
 <nav id="nav-out" class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="home.php"><img src="images/logogif.gif"></a>
+			<a class="navbar-brand" href="home.php"><img src="images/logogif.gif" alt="Tellastory logo"></a>
 		</div>
 		<div><?php include_once($nav); ?></div>
 	</div>

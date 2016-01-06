@@ -15,15 +15,22 @@
 		$userID = 	$row['userID'];
 		$description = $row['content'];
 		$postcards .= '<li><figure>
-							<img src="showImage.php?ID=' . $row['ID'] . '" alt="event-picture" class="postcard-picture">
+							<img src="showImage.php?ID=' . $row['ID'] . '" alt="'.$row['location'].'">
 							<figcaption>
-								<h3>' . $title . '</h3>
-								<p class="content">' . $description . '</p>
-								<p class="sender">Sent by: <a href="userProfile.php?ID=' . $userID . '">' . $userID . '</a></p>
+							<p>'.$row['content'].' </p>
 							</figcaption>
+						</figure>
+						<h3>' . $title . '</h3>
+						<div class="share"></div>
 						</figure></li>';
 	}
 	echo $postcards;
 	$conn = "";
 ?>
-
+<script src="js/jssocials-1.0.0/jquery.js"></script>
+    <script src="js/jssocials-1.0.0/jssocials.min.js"></script>
+    <script>
+        $(".share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "pinterest"]
+        });
+		</script>
