@@ -4,7 +4,7 @@
 	<nav id="front-page" class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="home.php"><img src="images/logowhite.png"></a>
+				<a class="navbar-brand-home" href="home.php"><img src="images/logowhite.png"></a>
 			</div>
 			<div>
             <?php
