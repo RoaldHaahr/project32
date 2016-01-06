@@ -85,6 +85,7 @@ section#home {
 }
 
 #slider-box {
+	margin: auto;
 	box-shadow:none;
 	width: 800px;
 }
