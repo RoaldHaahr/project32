@@ -1,6 +1,9 @@
 <?php $page = 'completeprofile'; ?>
 <?php include_once('header.php'); ?>
-<?php include_once('nav.php'); ?>
+<?php
+	include_once('nav.php');
+	$_SESSION['loggedOn'] = 1;
+?>
 <?php
 	include_once('connection.php');
 
@@ -8,7 +11,6 @@
 	<section class="page" id="signup-completion-page">
 		
 		<?php
-			include_once('connection.php');
 
 			session_start();
 
@@ -26,9 +28,9 @@
             $tourist = "";
             $local = "";
 
-            if($row["role"] == 'tourist'){
+            if($row["role"] == 'tourist') {
                 $tourist = 'checked = "checked"';
-            } else{
+            } else if($row['role'] == 'local') {
                 $local = 'checked = "checked"';
             }
         ?>
@@ -43,24 +45,24 @@
 				</div>
 				 <div class="row">
                     <div class="col-md-11" id="name">
-                        <input id="name-input" type="text" name="name" placeholder="name" value="<? echo $row['name']; ?>" >
+                        <input id="name-input" type="text" name="name" placeholder="name" value="<?php echo htmlspecialchars($row['name']); ?>" >
                     </div>
                 </div>
 				<div class="row">
 					<div class="col-md-6">
 						<p class="role-radio" id="tourist-radio">
-							<input type="radio" name="role" value="Tourist" <?php echo $tourist; ?>>I'm a tourist
+							<input type="radio" name="role" value="Tourist" <?php echo $tourist; ?> required>I'm a tourist
 						</p>
 					</div>
 					<div class="col-md-6">
 						<p class="role-radio" id="local-radio">
-							<input type="radio" name="role" value="Local" <?php echo $local; ?>>I'm a local
+							<input type="radio" name="role" value="Local" <?php echo $local; ?> required>I'm a local
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<figure id="signup-profile-picture"><img src="showImageProfile.php?ID=<?php echo $row['ID']; ?>" alt="Profile picture"></figure>
+						<figure id="signup-profile-picture"><img src="showProfilePicture.php?ID=<?php echo $_SESSION['userID']; ?>" alt="Profile picture"></figure>
 
 					</div>
 					<div class="col-md-4">
@@ -76,7 +78,7 @@
 
 					<div class="col-md-5">
 						<div id="nationality-and-description">
-							<select name="user-nationality" id="select-nationality">
+							<select name="nationality" id="select-nationality">
 
 								<option selected disabled>Your nationality</option>
 								<?php include_once('getCountries.php'); 
@@ -84,7 +86,7 @@
 								?>
 
 							</select><br>
-							<textarea id="description" name="user-description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
+							<textarea id="description" name="description" placeholder="Write a short description"><?php echo $row['description']; ?></textarea>
 						</div>
 					</div>
 				</div>

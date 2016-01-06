@@ -4,10 +4,10 @@
 
 	session_start();
 
-	if($_FILES["user-picture"]['name'] != ""){
+	if($_FILES["image"]['name'] != ""){
 
-		$image = addslashes(file_get_contents($_FILES['user-picture']['tmp_name'])); //Extract the content of image
-		$imageProperties = getimageSize($_FILES['user-picture']['tmp_name']); //Extract the mime type (filetype)
+		$image = addslashes(file_get_contents($_FILES['image']['tmp_name'])); //Extract the content of image
+		$imageProperties = getimageSize($_FILES['image']['tmp_name']); //Extract the mime type (filetype)
 		
 		$sql = "UPDATE users 
 				SET name = :name, role = :role, picture = '" . $image . "', filetype = '" . $imageProperties . "', description = :description, country = :country  
@@ -22,7 +22,7 @@
 		$st->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
 		$st->bindValue(':role', $_POST['role'], PDO::PARAM_STR);
 		$st->bindValue(':description', $_POST['description'], PDO::PARAM_STR);
-		$st->bindValue(':country', $_POST['country'], PDO::PARAM_STR);
+		$st->bindValue(':country', $_POST['nationality'], PDO::PARAM_STR);
 		$st->execute();
 	} catch (PDOException $e) {
 		echo "Server error - try again! " . $e->getMessage();

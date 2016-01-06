@@ -1,13 +1,12 @@
 <?php
 	$page='myprofile';
 ?>
+
 <?php include_once('header.php'); ?>
 <?php include_once('nav.php'); ?>
 
 <?php
 	include_once('connection.php');
-
-	session_start();
 
 	$sql = "SELECT * FROM users WHERE ID = " . $_SESSION['userID'];
 
@@ -18,6 +17,8 @@
 	} catch (PDOException $e) {
 		echo "Server error - try again!<br>" . $e->getMessage();
 	}
+
+	$_SESSION['role'] = $row['role'];
 
 	$profilePicture = '<img src="showProfilePicture.php?ID=' . $_SESSION['userID'] . '" class="profile-picture">';
 ?>

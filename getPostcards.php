@@ -22,7 +22,7 @@ $uid=$_SESSION['userID'];
 	foreach($rows as $row) {
 		$location = $row['location'];
 		$description = $row['content'];
-		$username = $row['userID'];
+		$username = $row['name'];
 		$pid = $row['ID'];
 		$title = $row['title'];
 		$liked= false;
