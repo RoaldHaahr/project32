@@ -1,7 +1,9 @@
 <?php
 	include_once('connection.php');
 
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype, tags FROM postcards WHERE type=1";
+	$sql = "SELECT name, postcards.ID, userID, location, content, title, postcards.picture, postcards.filetype, tags
+ 		FROM users, postcards
+ 		WHERE type=1 AND users.ID = userID";
 
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -27,7 +29,7 @@ $uid=$_SESSION['userID'];
 		$title = $row['title'];
 		$liked= false;
 		foreach($likeRows as $likeRow){
-			if($row['ID'] == $likeRow['pid']){
+			if($pid == $likeRow['pid']){
 		$liked= true;
 					$postcards .= '<li>
 						<figure>
@@ -79,7 +81,7 @@ $uid=$_SESSION['userID'];
 						</figure>
 						<h3>' . $title . '</h3>
 						<span class="postcard-auth">Send by: '.$username.'</span>
-						<span class="postcard-tags">Tags: '.$row['location'].'</span>
+						<span class="postcard-tags">Tags: '.$row['tags'].'</span>
 						<div class="share"></div>
 						</figure>
 					</li>';
