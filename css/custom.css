@@ -69,7 +69,7 @@ body {
 
 section.page {
 	width: 100%;
-	height: auto;
+	min-height: 100%;
 }
 
 section.homepage {
@@ -919,7 +919,6 @@ time {
 .event-details{
 	text-align:center;
 }
-/*******/
 
 .link-button {
 	display: inline-block;
