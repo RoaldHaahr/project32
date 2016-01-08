@@ -83,7 +83,6 @@ $uid=$_SESSION['userID'];
 						<span class="postcard-auth">Send by: '.$username.'</span>
 						<span class="postcard-tags">Tags: '.$row['tags'].'</span>
 						<div class="share"></div>
-						</figure>
 					</li>';
 	}
 		}

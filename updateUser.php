@@ -12,11 +12,15 @@
 		$sql = "UPDATE users 
 				SET name = :name, role = :role, picture = '" . $image . "', filetype = '" . $imageProperties . "', description = :description, country = :country  
 				WHERE ID = " . $_SESSION['userID'];
-	} else{
+
+	} else {
+
 		$sql = "UPDATE users 
 				SET name = :name, role = :role, description = :description, country = :country  
 				WHERE ID = " . $_SESSION['userID'];
+
 	}
+
 	try {
 		$st = $conn->prepare($sql);
 		$st->bindValue(':name', $_POST['name'], PDO::PARAM_STR);

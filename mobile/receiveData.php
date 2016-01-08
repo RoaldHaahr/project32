@@ -7,7 +7,7 @@
 	session_start();
 	
 	if(!empty($_SESSION['userID'])) {
-		if($_SESSION['role'] == 'tourist') {
+		if($_SESSION['role'] == 'Tourist') {
 			
 			echo $_SESSION['loggedOn'] . $_SESSION['role'];
 			
@@ -39,6 +39,6 @@
 	
 	$conn = null;
 
-	header('Location: '. 'm.postcards.php' );
+	//header('Location: '. 'm.postcards.php' );
 	
 ?>

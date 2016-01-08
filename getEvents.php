@@ -28,9 +28,8 @@
 			$events .= '
 				<div class="row events-list-item">
 					<div class="col-md-4 event-date">
-						<time>' . date('M d, Y', $date) . '</time>
-						<br>
-						<time>' . date('H i', $date) .'</time>
+						<time datetime="' . date('Y-m-d H:i', $date) . '">' . date('M d, Y', $date) . '<br>'
+						. date('H:i', $date) .'</time>
 					</div>
 					<div class="col-md-4 event-picture">
 						<img class="events-picture" src="' . $image . '" alt="">

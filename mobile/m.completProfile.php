@@ -1,4 +1,6 @@
-<?php include 'getUserProfile.php'; ?>
+<?php include 'getUserProfile.php';
+    $_SESSION['loggedOn'] = 1;
+?>
 <!DOCTYPE html>
 <html>
     <?php include 'm.head.php'; ?>

@@ -46,17 +46,17 @@
                   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" id="slider-box">
     <div class="item active">
-      <p class="welcome-text" class="first" >Create online postcard with your story from Aarhus. Share your
+      <p class="welcome-text first">Create online postcard with your story from Aarhus. Share your
 experience and give amazing and unique present to your friends. Check newest events in Aarhus. Meet local folks and learn new things about Danish culture from them. Enjoy your time in Aarhus!
 </p>
     </div>
 
     <div class="item">
-      <p class="welcome-text" class="second">Only here you can find most incredible stories from Aarhus. Check out now stories from people who visited Aarhus. Sign up to add postcard with your story. Share it with other users and your social network or keep them private as your travel diary. Join us today and get better experience from your travel to Aarhus!</p>
+      <p class="welcome-text second">Only here you can find most incredible stories from Aarhus. Check out now stories from people who visited Aarhus. Sign up to add postcard with your story. Share it with other users and your social network or keep them private as your travel diary. Join us today and get better experience from your travel to Aarhus!</p>
     </div>
 
     <div class="item">
-      <p class="welcome-text" class="third">Do you want to spend great time in Aarhus and meet amazing local folks? Check out newest events. Sign up today and get incredible opportunity to get a company of local folks. Choose person who would you like to guide you from people participating in the event and get some new experience from your travel to Aarhus.</p>
+      <p class="welcome-text third">Do you want to spend great time in Aarhus and meet amazing local folks? Check out newest events. Sign up today and get incredible opportunity to get a company of local folks. Choose person who would you like to guide you from people participating in the event and get some new experience from your travel to Aarhus.</p>
     </div>
 
    

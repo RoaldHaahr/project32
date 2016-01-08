@@ -3,7 +3,7 @@
 <?php include_once('nav.php'); ?>
 <?php
 	include_once('connection.php');
-
+	$_SESSION['loggedOn'] = 1;
 ?>
 	<section class="page" id="signup-completion-page">
 		

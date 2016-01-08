@@ -7,5 +7,5 @@
 	}
 	session_unset();
 	session_destroy();
-	header('Location: '. '/tellastory/m.welcome.php' );
+	header('Location: '. 'm.welcome.php' );
 ?>

@@ -12,6 +12,7 @@
 			
 			<ul class="grid cs-style-1">
 				<?php require('getPostcards.php'); ?>
+			</ul>
 				
 				
 		</section><!-- /container -->
