@@ -39,6 +39,6 @@
 	
 	$conn = null;
 
-	//header('Location: '. 'm.postcards.php' );
+	header('Location: '. 'm.postcards.php' );
 	
 ?>
