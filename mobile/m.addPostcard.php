@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
-			<head>
-
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		
-
-		<link rel="stylesheet" href="bootstrap.min.css" />
-		<link rel="stylesheet" href="m.style.css" />
-		
-
-		<style>
-			html, body{
-				background-color: #eee;
-	        }
-		</style>
-
-	</head>
-	</head>
+	<?php include 'm.head.php'; ?>
 
 	<body>
 
@@ -74,33 +54,24 @@
 	<footer>
     	<div class="row">
     		<div class="col-xs-3">
-    			<a href="m.events.php">
-					<img src="img/calender.png" alt="" class="menuitem"> <br />Events
-				</a>
+    			<input type="button" value="Events" class="eventBtn" onclick="window.location.assign('m.events.php')">
     		</div>
 		
     		<div class="col-xs-3">
-    		<div class="active">
-    			<a href="m.postcards.php">
-					<img src="img/postcard.png" alt="" class="menuitem" /> <br /> Postcard
-				</a>
-			</div>
+	    		<div class="active">
+	    			<input type="button" value="Postcards" class="postcardsBtn" onclick="window.location.assign('m.postcards.php')">
+				</div>
     		</div>
 
     		<div class="col-xs-3">
-    			<a href="m.diary.php">
-					<img src="img/diary.png" alt="" class="menuitem" /> <br />Your Diary
-				</a>
+    			<input type="button" value="Diary" class="diaryBtn" onclick="window.location.assign('m.Diary.php')">
     		</div>
 
     		<div class="col-xs-3">
-    			<a href="m.yourProfile.php">
-					<img src="img/user.png" alt="" class="menuitem" /> <br />Your Profil
-				</a>
+    			<input type="button" value="Profile" class="profileBtn" onclick="window.location.assign('m.yourProfile.php')">
     		</div>
     	</div>
     
-
-	</body>
+    </footer>
 
 </html>

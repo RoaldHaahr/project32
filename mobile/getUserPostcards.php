@@ -2,7 +2,9 @@
 error_reporting(E_ALL); ini_set('display_errors', 1);
 	include_once('connection.php');
 
-	$sql = "SELECT ID, userID, location, content, title, picture, filetype FROM postcards WHERE type = 1 AND userID = " . $_GET['ID'];
+	$sql = "SELECT name, postcards.ID, userID, location, content, title, postcards.picture, postcards.filetype, tags 
+			FROM users, postcards 
+			WHERE type = 1 AND users.ID = userID AND userID = " . $_GET['ID'];
 
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -26,7 +28,7 @@ if($showLikes){
 		$userID = 	$row['userID'];
 		$description = $row['content'];
 		$pid = $row['ID'];
-		$username = $row['userID'];
+		$username = $row['name'];
 		$liked= false;
 		foreach($likeRows as $likeRow){
 			if($row['ID'] == $likeRow['pid']){
@@ -36,7 +38,7 @@ if($showLikes){
 							<figcaption>
 								<h3>' . $title . '</h3>
 								<p class="content">' . $description . '</p>
-								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $userID . '</a></p>
+								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $username . '</a></p>
 								<p class="like" id="'.$pid.'" title="Unlike">Unlike</p>
 							</figcaption>
 						</figure>';
@@ -48,7 +50,7 @@ if($showLikes){
 							<figcaption>
 								<h3>' . $title . '</h3>
 								<p class="content">' . $description . '</p>
-								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $userID . '</a></p>
+								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $username . '</a></p>
 								<p class="like" id="'.$pid.'" title="Like">Like</p>
 							</figcaption>
 						</figure>';
@@ -60,13 +62,14 @@ else{
 		$title = $row['title'];
 		$location = $row['location'];
 		$description = $row['content'];
-		$userID = 	$row['userID'];
+		$userID = $row['userID'];
+		$username = $row['name'];
 		$postcards .= '<figure class="postcardbox">
 							<img src="showImage.php?ID=' . $row['ID'] . '" alt="event-picture" class="postcard-picture">
 							<figcaption>
 								<h3>' . $title . '</h3>
 								<p class="content">' . $description . '</p>
-								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $userID . '</a></p>
+								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $username . '</a></p>
 							</figcaption>
 						</figure>';
 		
@@ -76,7 +79,14 @@ else{
 	$conn = "";
 ?>
 
-<script src="jquery-2.1.4.min.js">   
+<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jssocials-1.0.0/jquery.js"></script>
+    <script src="js/jssocials-1.0.0/jssocials.min.js"></script>
+    <script>
+        $(".share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "pinterest"]
+        });
+
 
 var that;
 $(document).ready(function(){
@@ -94,6 +104,7 @@ $(document).ready(function(){
      that.text('Like');
      that.attr('title','Like');
     });
+	
    }
   }
  });

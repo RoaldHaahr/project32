@@ -1,13 +1,10 @@
-<?php include 'getUserProfile.php';
-    $_SESSION['loggedOn'] = 1;
-?>
+<?php include 'getUserProfile.php'; ?>
 <!DOCTYPE html>
 <html>
     <?php include 'm.head.php'; ?>
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="jquery.alt-checkbox.js"></script>
-
+        <script src="js/jquery.alt-checkbox.js"></script>
     </head>
 
     <body>
@@ -33,7 +30,7 @@
                 $tourist = "";
                 $local = "";
 
-                if($row["role"] == 'tourist'){
+                if($row["role"] == 'Tourist'){
                     $tourist = 'checked = "checked"';
                 } else{
                     $local = 'checked = "checked"';

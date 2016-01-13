@@ -10,8 +10,7 @@
             <div class="row">
             
                 <a href="m.postcards.php" id="logo-header"><img src="img/logowhite.png" alt="logo" id="logowhite"></a>
-                <a href="m.createEvent.php"><img src="img/plus.png" alt="" class="plus"></a>
-
+                
             </div>
 
 
@@ -25,28 +24,20 @@
         <div class="row">
             <div class="col-xs-3">
                 <div class="active">
-                    <a href="m.events.php">
-                        <img src="img/calender.png" alt="" class="menuitem"> <br />Events
-                    </a>
+                    <input type="button" value="Events" class="eventBtn" onclick="window.location.assign('m.events.php')">
                 </div>
             </div>
         
             <div class="col-xs-3">
-                <a href="m.postcards.php">
-                    <img src="img/postcard.png" alt="" class="menuitem" /> <br /> Postcard
-                </a>
+                <input type="button" value="Postcards" class="postcardsBtn" onclick="window.location.assign('m.postcards.php')">
+            </div>
+            
+            <div class="col-xs-3">
+                <input type="button" value="Diary" class="diaryBtn" onclick="window.location.assign('m.Diary.php')">
             </div>
 
             <div class="col-xs-3">
-                <a href="m.diary.php">
-                    <img src="img/diary.png" alt="" class="menuitem" /> <br />Your Diary
-                </a>
-            </div>
-
-            <div class="col-xs-3">
-                    <a href="m.yourProfile.php">
-                        <img src="img/user.png" alt="" class="menuitem" /> <br />Your Profil
-                    </a>
+                <input type="button" value="Profile" class="profileBtn" onclick="window.location.assign('m.yourProfile.php')">
             </div>
         </div>
     

@@ -1,8 +1,6 @@
 <?php
-include 'connection.php';
-
 session_start();
-
+include_once('connection.php');
 if (isset($_SESSION['userID'])) {
     $user   = $_SESSION['userID'];
 $pid=$_POST['pid'];

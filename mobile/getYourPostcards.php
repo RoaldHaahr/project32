@@ -20,7 +20,7 @@
 							<figcaption>
 								<h3>' . $title . '</h3>
 								<p class="content">' . $description . '</p>
-								<p class="sender">Sent by: <a href="m.profile.php?ID=' . $userID . '">' . $userID . '</a></p>
+								<p class="sender">Sent by: You</p>
 							</figcaption>
 						</figure>';
 	}

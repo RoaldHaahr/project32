@@ -35,28 +35,20 @@
         <div class="row">
             <div class="col-xs-3">
                 <div class="active">
-                    <a href="m.events.php">
-                        <img src="img/calender.png" alt="" class="menuitem"> <br />Events
-                    </a>
+                    <input type="button" value="Events" class="eventBtn">
                 </div>
             </div>
         
             <div class="col-xs-3">
-                <a href="m.postcards.php">
-                    <img src="img/postcard.png" alt="" class="menuitem" /> <br /> Postcard
-                </a>
+                <input type="button" value="Postcards" class="postcardsBtn">
             </div>
 
             <div class="col-xs-3">
-                <a href="m.diary.php">
-                    <img src="img/diary.png" alt="" class="menuitem" /> <br />Your Diary
-                </a>
+                <input type="button" value="Diary" class="diaryBtn">
             </div>
 
             <div class="col-xs-3">
-                    <a href="m.yourProfile.php">
-                        <img src="img/user.png" alt="" class="menuitem" /> <br />Your Profil
-                    </a>
+                <input type="button" value="Profile" class="profileBtn">
             </div>
         </div>
     

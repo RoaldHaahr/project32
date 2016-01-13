@@ -11,8 +11,6 @@
 		echo "Server error - try again!<br>" . $e->getMessage();
 	}
 
-	$_SESSION['role'] = $row['role'];
-
 	$profilePicture = '<img src="showImageProfile.php?ID=' . $_SESSION['userID'] . '" alt="profilePicture" class="profilePicture">';
 	
 
