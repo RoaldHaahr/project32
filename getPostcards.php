@@ -2,8 +2,8 @@
 	include_once('connection.php');
 
 	$sql = "SELECT name, postcards.ID, userID, location, content, title, postcards.picture, postcards.filetype, tags
- 		FROM users, postcards
- 		WHERE type=1 AND users.ID = userID";
+ 			FROM users, postcards
+ 			WHERE type=1 AND users.ID = userID";
 
 		$st = $conn->prepare($sql);
 		$st->execute();
@@ -24,7 +24,7 @@ $uid=$_SESSION['userID'];
 	foreach($rows as $row) {
 		$location = $row['location'];
 		$description = $row['content'];
-		$username = $row['userID'];
+		$username = $row['name'];
 		$pid = $row['ID'];
 		$title = $row['title'];
 		$liked= false;
